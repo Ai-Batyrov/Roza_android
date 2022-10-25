@@ -23,7 +23,6 @@
 				android:layout_height="match_parent"
 				android:src="@drawable/chart_cover"
 				android:scaleType="centerCrop"
-				android:alpha="0.8"
 				android:contentDescription="@string/favorites_title" />
 
 		<LinearLayout
@@ -42,7 +41,7 @@
 					android:visibility="visible"
 					android:textSize="30sp"
 					android:contentDescription="@string/favorites_title"
-					android:textStyle="bold"
+					style="@style/TextAppearance.AppCompat.Title"
 					android:fontFamily="@font/manrope_bold"
 					android:textColor="@color/white"
 					app:layout_constraintStart_toStartOf="parent"
@@ -79,8 +78,7 @@
 			tools:visibility="visible"
 			android:layout_gravity="bottom"
 			app:layout_constraintTop_toBottomOf="@+id/favorites_header_layout"
-			app:layout_constraintBottom_toTopOf="parent"
-			android:background="@color/transparency_gray">
+			app:layout_constraintBottom_toTopOf="parent">
 
 		<androidx.recyclerview.widget.RecyclerView
 				android:id="@+id/favorite_recycler_view"
