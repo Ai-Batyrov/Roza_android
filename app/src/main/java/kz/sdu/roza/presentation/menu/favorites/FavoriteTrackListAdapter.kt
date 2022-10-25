@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kz.sdu.roza.R
+import kz.sdu.roza.data.models.Track
 
 class FavoriteTrackListAdapter(
-    private val dataset: List<>,
-    private val context: Context
+    private val dataset: List<Track>
 )
     : RecyclerView.Adapter<FavoriteTrackListAdapter.TrackViewHolder>() {
 
