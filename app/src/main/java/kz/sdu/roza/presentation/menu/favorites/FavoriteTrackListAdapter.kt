@@ -1,6 +1,5 @@
 package kz.sdu.roza.presentation.menu.favorites
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,12 +10,10 @@ import kz.sdu.roza.data.models.Track
 
 class FavoriteTrackListAdapter(
     private val dataset: List<Track>
-)
-    : RecyclerView.Adapter<FavoriteTrackListAdapter.TrackViewHolder>() {
+) : RecyclerView.Adapter<FavoriteTrackListAdapter.TrackViewHolder>() {
 
 
-    class TrackViewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemView)
-    {
+    class TrackViewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemView) {
         private var title: TextView = itemView.findViewById(R.id.text_track_list_item_title)
         private var artists: TextView = itemView.findViewById(R.id.text_track_list_item_artists)
 
