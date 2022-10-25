@@ -6,4 +6,7 @@
 	<string name="chart_title">High Energy Songs</string>
 	<string name="track_list_item_title">Title</string>
 	<string name="track_list_item_artists">Artists</string>
+	<string name="search">Search</string>
+	<string name="results">Results</string>
+	<string name="search_hint">Song or Artist</string>
 </resources>
