@@ -15,17 +15,13 @@ class FavoriteTrackListAdapter(
     : RecyclerView.Adapter<FavoriteTrackListAdapter.TrackViewHolder>() {
 
 
-    class TrackViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    class TrackViewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemView)
     {
-        private var title: TextView
-        private var artists: TextView
+        private var title: TextView = itemView.findViewById(R.id.text_track_list_item_title)
+        private var artists: TextView = itemView.findViewById(R.id.text_track_list_item_artists)
 
-        init {
-            title = itemView.findViewById(R.id.text_track_list_item_title)
-            artists = itemView.findViewById(R.id.text_track_list_item_artists)
-        }
-
-        fun bind(title: String) {
+        fun bind(title: String, artists: String) {
+            this.artists.text = artists
             this.title.text = title
         }
     }
@@ -38,10 +34,9 @@ class FavoriteTrackListAdapter(
     }
 
     override fun onBindViewHolder(holder: TrackViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        val item = dataset[position]
+        holder.bind(item.title, item.artists)
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount(): Int = dataset.size
 }
