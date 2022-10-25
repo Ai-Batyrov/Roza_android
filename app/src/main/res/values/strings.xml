@@ -9,4 +9,10 @@
 	<string name="search">Search</string>
 	<string name="results">Results</string>
 	<string name="search_hint">Song or Artist</string>
+	<string name="welcome_to_roza">Welcome to ROZA</string>
+	<string name="enter_roza_credentials">Please, enter your ROZA account credentials</string>
+	<string name="password">Password</string>
+	<string name="email">E-mail</string>
+	<string name="sign_up">Sign Up</string>
+	<string name="login">Login</string>
 </resources>
