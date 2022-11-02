@@ -15,4 +15,14 @@
 	<string name="email">E-mail</string>
 	<string name="sign_up">Sign Up</string>
 	<string name="login">Login</string>
+    <string name="aibolat_batyrov">Aibolat Batyrov</string>
+    <string name="profile">Profile</string>
+    <string name="color_scheme">Color Scheme</string>
+	<string name="application_color_theme">Application color theme</string>
+	<string name="system">System</string>
+	<string name="local_files">Local files</string>
+	<string name="files_from_device">Show audio files from this device</string>
+	<string name="about">About</string>
+	<string name="version">Version</string>
+	<string name="versionNumber">v1.0.0</string>
 </resources>
