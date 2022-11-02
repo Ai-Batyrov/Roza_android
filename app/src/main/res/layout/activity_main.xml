@@ -7,8 +7,7 @@
 		tools:context=".MainActivity"
 		android:orientation="vertical"
 		tools:visibility="visible"
-		android:visibility="visible"
-		app:layout_constraintDimensionRatio="H,1:3">
+		android:visibility="visible">
 
 	<!-- Header Layout -->
 	<FrameLayout
@@ -73,11 +72,11 @@
 	<FrameLayout
 			android:id="@+id/favorites_recycler_view_layout"
 			android:layout_width="match_parent"
-			android:layout_height="540dp"
+			android:layout_height="480dp"
 			android:visibility="visible"
 			tools:visibility="visible"
 			android:layout_gravity="bottom"
-			app:layout_constraintTop_toBottomOf="@+id/favorites_header_layout"
+			app:layout_constraintTop_toBottomOf="@id/favorites_header_layout"
 			app:layout_constraintBottom_toTopOf="parent">
 
 		<androidx.recyclerview.widget.RecyclerView
@@ -87,7 +86,6 @@
 				android:layout_marginStart="8dp"
 				android:layout_marginTop="12dp"
 				android:layout_marginEnd="8dp"
-				android:layout_marginBottom="12dp"
 				app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
 
 		</androidx.recyclerview.widget.RecyclerView>
