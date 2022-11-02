@@ -30,4 +30,16 @@
 	<string name="radio_stations_radio_count">7 internet radio streams</string>
 	<string name="radio_stations_header_text">Radio Stations</string>
 	<string name="radio_stations_add_string">+</string>
+	<string name="settings_text_profile">Profile</string>
+	<string name="settings_user_fullname">Yerkebulan Rakhmanberdi</string>
+	<string name="settings_button_text_edit_profile">Edit profile</string>
+	<string name="settings_button_text_logout">Log out</string>
+	<string name="settings_text_color_scheme">Color Scheme</string>
+	<string name="settings_text_application_color_scheme">Color Scheme</string>
+	<string name="settings_color_scheme_select_text">System</string>
+	<string name="settings_text_local_files">Local files</string>
+	<string name="settings_text_show_local_files">Show audio files from this device</string>
+	<string name="settings_text_about">About</string>
+	<string name="settings_text_version">Version</string>
+	<string name="settings_text_version_value">v1.0.0</string>
 </resources>
