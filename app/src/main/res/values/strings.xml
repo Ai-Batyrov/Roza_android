@@ -14,5 +14,18 @@
 	<string name="password">Password</string>
 	<string name="email">E-mail</string>
 	<string name="sign_up">Sign Up</string>
-	<string name="login">Login</string>
+	<string name="login">Log In</string>
+    <string name="sign_up_to_roza">Sign Up to ROZA</string>
+	<string name="firstname">Firstname</string>
+	<string name="lastname">Lastname</string>
+	<string name="name">Name</string>
+	<string name="country">Country</string>
+	<string name="kazakhstan">Kazakhstan</string>
+	<string name="next">Next</string>
+	<string name="cancel">Cancel</string>
+	<string name="we_send_verification_code_to">We send verification code to</string>
+	<string name="na_03_gmail_com">a**************.03@gmail.com</string>
+	<string name="please_enter_code_in_your_e_mail_message">Please, enter code in your e-mail message</string>
+	<string name="code">Code</string>
+
 </resources>
