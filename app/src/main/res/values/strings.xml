@@ -65,4 +65,5 @@
     <string name="bottom_nav_search_title">Search</string>
     <string name="bottom_nav_favorites_title">Favorites</string>
     <string name="bottom_nav_burger_menu_title">Other</string>
+    <string name="add_new_playlist_title">Add new playlist</string>
 </resources>
