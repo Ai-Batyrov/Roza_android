@@ -7,7 +7,7 @@
 
 	<fragment
 			android:id="@+id/homeMainFragment"
-			android:name="kz.sdu.roza.HomeMainFragment"
+			android:name="kz.sdu.roza.presentation.menu.home.HomeMainFragment"
 			android:label="fragment_home_main"
 			tools:layout="@layout/fragment_home_main" />
 </navigation>

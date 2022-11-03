@@ -6,7 +6,7 @@
 		android:layout_height="90dp"
 		android:layout_marginBottom="8dp"
 		app:cardCornerRadius="8dp"
-		app:cardBackgroundColor="@color/transparency_gray">
+		app:cardBackgroundColor="@color/gray">
 
 	<ImageView
 			android:id="@+id/track_cover_image"

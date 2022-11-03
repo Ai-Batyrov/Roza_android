@@ -8,4 +8,5 @@
 	<string name="bottom_nav_search_title">Search</string>
 	<string name="bottom_nav_favorites_title">Favorites</string>
 	<string name="bottom_nav_burger_menu_title">Other</string>
+	<string name="favorites_title">Favorites</string>
 </resources>
