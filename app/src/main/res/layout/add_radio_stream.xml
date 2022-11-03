@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="horizontal"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:padding="20dp">
+
+	<TextView
+			android:id="@+id/add_new_ratio"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:height="27dp"
+			android:gravity="center_horizontal|top"
+			android:lineHeight="27.32dp"
+			android:text="@string/add_new_internet_radio_stream"
+			android:textAlignment="center"
+			android:textColor="#565656"
+			android:fontFamily="@font/manrope_bold"
+			android:textSize="20sp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+			android:id="@+id/Title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/title"
+			android:textColor="#000000"
+			android:fontFamily="@font/manrope_bold"
+			app:layout_constraintTop_toBottomOf="@+id/add_new_ratio"
+			app:layout_constraintStart_toStartOf="parent"
+			android:layout_marginTop="150dp" />
+
+	<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/textInputTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toBottomOf="@id/Title"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent">
+
+		<EditText
+				android:id="@+id/editTextTitle"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:autofillHints="name"
+				android:hint="@string/add_radio_stream_title_hint_text"
+				android:ems="10"
+				android:background="@null"
+				android:inputType="text"
+				android:labelFor="@id/textInputTitle" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<TextView
+			android:id="@+id/URL"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/url"
+			android:textColor="#000000"
+			android:fontFamily="@font/manrope_bold"
+			app:layout_constraintTop_toBottomOf="@+id/textInputTitle"
+			app:layout_constraintStart_toStartOf="parent"
+			android:layout_marginTop="22dp" />
+
+	<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/textInputURL"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toBottomOf="@id/URL"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent">
+
+		<EditText
+				android:id="@+id/editTextURL"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:autofillHints="name"
+				android:hint="@string/add_radio_stream_url_hint_text"
+				android:ems="10"
+				android:background="@null"
+				android:inputType="textUri" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+
+	<TextView
+			android:id="@+id/add_radio_stream_select_edit_country_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="22dp"
+			android:text="@string/country"
+			android:textColor="#000000"
+			android:fontFamily="@font/manrope_bold"
+			app:layout_constraintTop_toBottomOf="@id/textInputURL"
+			app:layout_constraintStart_toStartOf="parent" />
+
+	<com.google.android.material.textfield.TextInputLayout
+			style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+			android:id="@+id/add_radio_stream_select_edit_country_input"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/add_radio_stream_select_edit_country_text"
+			app:boxBackgroundColor="#D9D9D9">
+
+		<AutoCompleteTextView
+				android:id="@+id/add_radio_stream_select_edit_country_default"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:inputType="none"
+				android:text="@string/kazakhstan"
+				android:fontFamily="@font/manrope_medium"
+				android:textSize="16sp"
+				android:textColor="#000000" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<TextView
+			android:id="@+id/add_radio_stream_text_cover_image"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="22dp"
+			android:text="@string/cover_image"
+			android:textColor="#000000"
+			android:fontFamily="@font/manrope_bold"
+			app:layout_constraintTop_toBottomOf="@id/add_radio_stream_select_edit_country_input"
+			app:layout_constraintStart_toStartOf="parent" />
+
+	<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/textInputCoverImage"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/add_radio_stream_text_cover_image">
+
+		<EditText
+				android:id="@+id/editTextCoverImage"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:hint="@string/select_file"
+				android:textSize="18sp"
+				android:autofillHints="name"
+				android:ems="10"
+				android:background="@null"
+				android:inputType="textEmailAddress" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.button.MaterialButton
+			android:id="@+id/add_radio_stream_cancel_button"
+			android:layout_width="138dp"
+			android:layout_height="60dp"
+			app:cornerRadius="4dp"
+			android:layout_marginBottom="3dp"
+			android:backgroundTint="#ffffff"
+			android:text="@string/cancel"
+			android:textAllCaps="false"
+			android:textColor="#6D6D6D"
+			android:textSize="23sp"
+			android:fontFamily="@font/manrope_medium"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			android:letterSpacing="0" />
+
+	<com.google.android.material.button.MaterialButton
+			android:id="@+id/add_radio_stream_save_button"
+			android:layout_width="138dp"
+			android:layout_height="60dp"
+			android:layout_marginBottom="3dp"
+			app:cornerRadius="4dp"
+			android:backgroundTint="#6D6D6D"
+			android:text="@string/save"
+			android:textAllCaps="false"
+			android:textColor="#FFFFFF"
+			android:textSize="23sp"
+			android:fontFamily="@font/manrope_medium"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			android:letterSpacing="0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
