@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="radio_stations_radio_count">7 internet radio streams</string>
+    <string name="radio_stations_header_text">Radio Stations</string>
+    <string name="radio_stations_add_string">+</string>
+    <string name="settings_button_text_edit_profile">Edit profile</string>
+    <string name="settings_button_text_logout">Log out</string>
+</resources>
