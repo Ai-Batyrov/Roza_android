@@ -42,6 +42,23 @@
 	<string name="settings_text_about">About</string>
 	<string name="settings_text_version">Version</string>
 	<string name="settings_text_version_value">v1.0.0</string>
+	<string name="add_new_internet_radio_stream">Add new internet radio stream</string>
+	<string name="title">Title</string>
+	<string name="url">URL</string>
+	<string name="select_file">Select file</string>
+	<string name="cover_image">Cover image</string>
+	<string name="save">Save</string>
+	<string name="profile">Profile</string>
+	<string name="color_scheme">Color Scheme</string>
+	<string name="application_color_theme">Application color theme</string>
+	<string name="system">System</string>
+	<string name="local_files">Local files</string>
+	<string name="files_from_device">Show audio files from this device</string>
+	<string name="about">About</string>
+	<string name="version">Version</string>
+	<string name="versionNumber">v1.0.0</string>
+	<string name="add_radio_stream_url_hint_text">https://stream.radio.com/main.aacp</string>
+	<string name="add_radio_stream_title_hint_text">Radio Name</string>
 	<!-- TODO: Remove or change this placeholder text -->
 	<string name="hello_blank_fragment">Hello blank fragment</string>
 	<string name="bottom_nav_home_title">Home</string>
