@@ -14,12 +14,16 @@ class FavoriteTrackListAdapter(
 
 
     class TrackViewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemView) {
+        //        private var uuid: TextView = itemView.findViewById(R.id.text_track_list_item_title)
         private var title: TextView = itemView.findViewById(R.id.text_track_list_item_title)
         private var artists: TextView = itemView.findViewById(R.id.text_track_list_item_artists)
+//        private var coverUrl: TextView = itemView.findViewById(R.id.text_track_list_item_artists)
 
-        fun bind(title: String, artists: String) {
-            this.artists.text = artists
-            this.title.text = title
+        fun bind(track: Track) {
+//            uuid.text = track.uuid
+            this.artists.text = track.artists
+            this.title.text = track.title
+//            coverUrl.text = track.coverUrl
         }
     }
 
@@ -32,7 +36,7 @@ class FavoriteTrackListAdapter(
 
     override fun onBindViewHolder(holder: TrackViewHolder, position: Int) {
         val item = dataset[position]
-        holder.bind(item.title, item.artists)
+        holder.bind(item)
     }
 
     override fun getItemCount(): Int = dataset.size

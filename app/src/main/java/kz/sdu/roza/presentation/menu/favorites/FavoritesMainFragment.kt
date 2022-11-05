@@ -8,13 +8,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kz.sdu.roza.R
-import kz.sdu.roza.data.datasources.FavoriteTracksDataSource
+import kz.sdu.roza.data.datasources.FavoritePlaylistDataSource
+import kz.sdu.roza.data.repository.FavoritePlaylistRepository
 
 private const val TRACK_COUNT = "0"
 
 class FavoritesMainFragment : Fragment() {
 
     private lateinit var trackList: RecyclerView
+    private lateinit var dataSource: FavoritePlaylistRepository
 
     private var trackCount: String? = null
 
@@ -30,10 +32,11 @@ class FavoritesMainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_favorites_main, container, false)
+        dataSource = FavoritePlaylistRepository()
 
         trackList = view.findViewById(R.id.favorite_recycler_view)
         trackList.layoutManager = LinearLayoutManager(activity)
-        trackList.adapter = FavoriteTrackListAdapter(FavoriteTracksDataSource().loadTracks())
+        trackList.adapter = FavoriteTrackListAdapter(dataSource.getPlaylist())
         trackList.setHasFixedSize(true)
         return view
     }
