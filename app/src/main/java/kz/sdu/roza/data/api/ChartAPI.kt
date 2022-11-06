@@ -19,6 +19,12 @@ data class ChartAPI(val api: String) : BaseAPI {
                     "Dan Berk, The Irrepressobles and more",
                     "img/chart_cover"
                 ),
+                Chart(
+                    5,
+                    "Kazakh Folk Songs",
+                    "Toregali Toreali, Kairat Nurtas and more",
+                    "img/chart_cover"
+                ),
             )
         )
     }

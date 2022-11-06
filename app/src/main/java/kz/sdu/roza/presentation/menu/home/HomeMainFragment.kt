@@ -18,7 +18,7 @@ class HomeMainFragment : Fragment() {
     private var chartTitle: String? = null
 
     private lateinit var chartsList: RecyclerView
-    private lateinit var dataSource: ChartsRepository
+    private lateinit var dataSource_1: ChartsRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,12 +32,12 @@ class HomeMainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home_main, container, false)
-        dataSource = ChartsRepository()
+        dataSource_1 = ChartsRepository()
 
         chartsList = view.findViewById(R.id.home_chart_recyclerView)
         chartsList.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
-        chartsList.adapter = ChartListAdapter(dataSource.getChartList())
+        chartsList.adapter = ChartListAdapter(dataSource_1.getChartList())
         chartsList.setHasFixedSize(true)
 
         return view

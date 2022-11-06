@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
 		android:layout_width="150dp"
-		android:layout_height="220dp"
+		android:layout_height="240dp"
 		android:layout_marginEnd="10dp"
 		xmlns:app="http://schemas.android.com/apk/res-auto"
 		app:cardBackgroundColor="?attr/colorSurfaceVariant"
@@ -20,9 +20,9 @@
 
 	<LinearLayout
 			android:layout_width="130dp"
-			android:layout_height="60dp"
+			android:layout_height="85dp"
 			android:layout_gravity="bottom"
-			android:layout_marginBottom="10dp"
+			android:layout_marginBottom="8dp"
 			android:layout_marginStart="10dp"
 			android:orientation="vertical">
 

@@ -5,7 +5,7 @@ import kz.sdu.roza.data.datasources.ChartsDataSource
 import kz.sdu.roza.data.models.Chart
 
 class ChartsRepository {
-    private var api: ChartAPI = ChartAPI("/chart/mixes")
+    private var api: ChartAPI = ChartAPI("/home")
     private var dataSource: ChartsDataSource = ChartsDataSource()
 
     init {
