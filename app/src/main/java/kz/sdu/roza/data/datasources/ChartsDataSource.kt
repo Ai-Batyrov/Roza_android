@@ -9,7 +9,7 @@ class ChartsDataSource : ListsDataSource() {
         charts = data as List<Chart>
     }
 
-    override fun getList(): List<Any> {
+    override fun getList(): List<Chart> {
         return charts
     }
 }
