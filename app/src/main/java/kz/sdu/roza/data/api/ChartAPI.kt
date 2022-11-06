@@ -15,7 +15,7 @@ data class ChartAPI(val api: String) : BaseAPI {
                 Chart(3, "House Mix", "David Guetta, Ilkay Sencan and more", "img/chart_cover"),
                 Chart(
                     4,
-                    "Dancehall Hits",
+                    "Classic Songs",
                     "Dan Berk, The Irrepressobles and more",
                     "img/chart_cover"
                 ),
