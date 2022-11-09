@@ -8,8 +8,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kz.sdu.roza.R
-import kz.sdu.roza.data.datasources.ChartsDataSource
-import kz.sdu.roza.data.models.Chart
 import kz.sdu.roza.data.repository.ChartsRepository
 
 private const val CHARTS_TITLE = "Top charts"
@@ -18,7 +16,7 @@ class HomeMainFragment : Fragment() {
     private var chartTitle: String? = null
 
     private lateinit var chartsList: RecyclerView
-    private lateinit var dataSource_1: ChartsRepository
+    private lateinit var dataSource: ChartsRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,12 +30,12 @@ class HomeMainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_home_main, container, false)
-        dataSource_1 = ChartsRepository()
+        dataSource = ChartsRepository()
 
         chartsList = view.findViewById(R.id.home_chart_recyclerView)
         chartsList.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
-        chartsList.adapter = ChartListAdapter(dataSource_1.getChartList())
+        chartsList.adapter = ChartListAdapter(dataSource.getChartList())
         chartsList.setHasFixedSize(true)
 
         return view

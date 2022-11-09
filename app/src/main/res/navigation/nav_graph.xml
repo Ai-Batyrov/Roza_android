@@ -10,4 +10,19 @@
 			android:name="kz.sdu.roza.presentation.menu.home.HomeMainFragment"
 			android:label="fragment_home_main"
 			tools:layout="@layout/fragment_home_main" />
+	<fragment
+			android:id="@+id/favoritesMainFragment"
+			android:name="kz.sdu.roza.presentation.menu.favorites.FavoritesMainFragment"
+			android:label="fragment_favorites_main"
+			tools:layout="@layout/fragment_favorites_main" />
+	<fragment
+			android:id="@+id/searchMainFragment"
+			android:name="kz.sdu.roza.presentation.menu.search.SearchMainFragment"
+			android:label="fragment_search_main"
+			tools:layout="@layout/fragment_search_main" />
+	<fragment
+			android:id="@+id/burgerMenuFragment"
+			android:name="kz.sdu.roza.presentation.menu.burgermenu.BurgerMenuFragment"
+			android:label="fragment_burger_menu"
+			tools:layout="@layout/fragment_burger_menu" />
 </navigation>
