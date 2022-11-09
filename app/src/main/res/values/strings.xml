@@ -69,6 +69,8 @@
     <string name="turkish_songs">Türkçe Şarkılar</string>
     <string name="number_of_songs">25 songs</string>
     <string name="choose_sort_option">Choose sort option</string>
+    <string name="developers">Developers</string>
+    <string name="developer_names">Yerkebulan Rahmanberdi, Aibolat Batyrov,\n Samat Zhumamuratov, Rauan Orynbasar</string>
     <string-array name="sort_options">
         <item>Date added</item>
         <item>By song name</item>

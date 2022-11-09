@@ -10,4 +10,22 @@
 			android:name="kz.sdu.roza.presentation.menu.home.HomeMainFragment"
 			android:label="fragment_home_main"
 			tools:layout="@layout/fragment_home_main" />
+	<fragment
+		android:id="@+id/settingsFragment"
+		android:name="kz.sdu.roza.presentation.settings.SettingsFragment"
+		android:label="fragment_settings"
+		tools:layout="@layout/fragment_settings" >
+		<action
+			android:id="@+id/action_settingsFragment_to_editProfileFragment"
+			app:destination="@id/editProfileFragment" />
+	</fragment>
+	<fragment
+		android:id="@+id/editProfileFragment"
+		android:name="kz.sdu.roza.presentation.settings.EditProfileFragment"
+		android:label="fragment_edit_profile"
+		tools:layout="@layout/fragment_edit_profile" >
+		<action
+			android:id="@+id/action_editProfileFragment_to_settingsFragment2"
+			app:destination="@id/settingsFragment" />
+	</fragment>
 </navigation>
