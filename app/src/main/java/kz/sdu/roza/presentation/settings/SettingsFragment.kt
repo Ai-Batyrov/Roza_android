@@ -8,11 +8,15 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.Navigation
 import kz.sdu.roza.R
+import kz.sdu.roza.databinding.FragmentSettingsBinding
 
 private const val USER_FULL_NAME = "param1"
 private const val USER_AVATAR_IMAGE_URL = "param2"
 
 class SettingsFragment : Fragment() {
+    private var _binding: FragmentSettingsBinding? = null
+    private val binding: FragmentSettingsBinding = _binding!!
+
     private var userFullName: String? = null
     private var userAvatarImageUrl: String? = null
 
@@ -29,13 +33,14 @@ class SettingsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_settings, container, false)
-        btn = view.findViewById(R.id.editProfileButton)
+    ): View {
+        _binding = FragmentSettingsBinding.inflate(inflater, container, false)
+        btn = binding.editProfileButton
         btn.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.editProfileFragment)
+            Navigation.findNavController(binding.root).navigate(R.id.editProfileFragment)
         }
-        return view
+
+        return binding.root
     }
 
     companion object {

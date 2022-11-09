@@ -44,7 +44,7 @@
 				android:text="@string/card_desc_text"
 				android:fontFamily="@font/manrope_light"
 				style="@style/TextAppearance.Material3.BodySmall"
-				android:textSize="10sp"
+				android:textSize="11sp"
 				android:layout_marginTop="8dp" />
 
 	</LinearLayout>
