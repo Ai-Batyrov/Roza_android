@@ -8,6 +8,6 @@ class SearchBarKeywordFactory(val text: String) :
 
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return SearchBarViewModel(text) as T
+        return SearchBarViewModel() as T
     }
 }

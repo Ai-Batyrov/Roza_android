@@ -17,7 +17,9 @@ class MainActivity : AppCompatActivity() {
 //        setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setFragment(HomeMainFragment())
+        if (savedInstanceState == null) {
+            setFragment(HomeMainFragment())
+        }
 
         binding.mainActivityBottomNavigationBar.setOnItemSelectedListener {
             when (it.itemId) {

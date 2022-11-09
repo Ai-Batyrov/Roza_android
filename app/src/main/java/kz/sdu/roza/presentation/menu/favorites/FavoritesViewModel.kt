@@ -1,12 +1,13 @@
 package kz.sdu.roza.presentation.menu.favorites
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import kz.sdu.roza.data.models.Track
 import kz.sdu.roza.data.repository.FavoritePlaylistRepository
 
 class FavoritesViewModel : ViewModel() {
-    private lateinit var playlist: MutableLiveData<List<Track>>
+    private val playlist = MutableLiveData<List<Track>>()
     private var repository: FavoritePlaylistRepository = FavoritePlaylistRepository()
 
     init {
@@ -17,7 +18,7 @@ class FavoritesViewModel : ViewModel() {
         playlist.value = list
     }
 
-    fun getPlaylist(): MutableLiveData<List<Track>> {
+    fun getPlaylist(): LiveData<List<Track>> {
         return playlist
     }
 }

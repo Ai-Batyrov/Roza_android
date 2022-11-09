@@ -10,20 +10,21 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kz.sdu.roza.R
-import kz.sdu.roza.data.repository.FavoritePlaylistRepository
 
 private const val TRACK_COUNT = "0"
 
 class FavoritesMainFragment : Fragment() {
 
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var playlist: FavoritePlaylistRepository
+    private lateinit var trackList: RecyclerView
+    private lateinit var favoritesViewModel: FavoritesViewModel
 
     private var trackCount: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        playlist = FavoritePlaylistRepository()
+        favoritesViewModel =
+            ViewModelProvider(this)[FavoritesViewModel::class.java]
+
         arguments?.let {
             trackCount = it.getString(TRACK_COUNT)
         }
@@ -35,10 +36,12 @@ class FavoritesMainFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_favorites_main, container, false)
 
-        recyclerView = view.findViewById(R.id.favorite_recycler_view)
-        recyclerView.layoutManager = LinearLayoutManager(activity)
-        recyclerView.adapter = FavoriteTrackListAdapter(playlist.getPlaylist())
-        recyclerView.setHasFixedSize(true)
+        trackList = view.findViewById(R.id.favorite_recycler_view)
+        trackList.layoutManager = LinearLayoutManager(activity)
+        favoritesViewModel.getPlaylist().observe(viewLifecycleOwner, Observer {
+            trackList.adapter = FavoriteTrackListAdapter(it)
+        })
+        trackList.setHasFixedSize(true)
 
         return view
     }

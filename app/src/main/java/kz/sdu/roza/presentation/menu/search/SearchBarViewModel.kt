@@ -5,8 +5,8 @@ import android.text.Editable
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class SearchBarViewModel(private val text: String) : ViewModel() {
-    private lateinit var keyword: MutableLiveData<String>
+class SearchBarViewModel : ViewModel() {
+    private val keyword = MutableLiveData<String>()
 
     init {
         keyword.value = ""
