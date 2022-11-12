@@ -77,6 +77,12 @@
 	<string name="card_desc_text">Description</string>
 	<string name="settings_change_password">Change password</string>
 	<string name="settings_click_to_go_change_password_page">Click to go change password page</string>
+	<string name="burger_menu_settings_user_fullname">Yerkebulan Rakhmanberdi</string>
+	<string name="burger_menu_radio_stations">Radio Stations</string>
+	<string name="burger_menu_playlists">Playlists</string>
+	<string name="home_header_greeting">Welcome, Aibolat Batyrov</string>
+	<string name="home_header_text">Today\'s recommendations for you</string>
+	<string name="home_chart_recyclerView_title">Top mixes</string>
 	<string-array name="sort_options">
 		<item>Date added</item>
 		<item>By song name</item>

@@ -35,7 +35,7 @@ class SettingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
-        btn = binding.editProfileButton
+        btn = binding.settingsButtonEditProfile
         btn.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.editProfileFragment)
         }

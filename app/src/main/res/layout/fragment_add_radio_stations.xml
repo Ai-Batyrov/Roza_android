@@ -1,182 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.menu.radiostations.AddRadioStationsFragment">
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		tools:context=".presentation.menu.radiostations.AddRadioStationsFragment">
 
-    <TextView
-        android:id="@+id/add_new_ratio"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:height="27dp"
-        android:gravity="center_horizontal|top"
-        android:lineHeight="27.32dp"
-        android:text="@string/add_new_internet_radio_stream"
-        android:textAlignment="center"
-        android:textColor="#565656"
-        android:fontFamily="@font/manrope_bold"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+	<com.google.android.material.textview.MaterialTextView
+			android:id="@+id/addnewradio_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal|top"
+			android:text="@string/add_new_internet_radio_stream"
+			android:textAlignment="center"
+			android:textColor="@color/black"
+			android:fontFamily="@font/manrope_bold"
+			android:layout_marginStart="10dp"
+			android:layout_marginTop="10dp"
+			android:textSize="23sp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/Title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/title"
-        android:textColor="#000000"
-        android:fontFamily="@font/manrope_bold"
-        app:layout_constraintTop_toBottomOf="@+id/add_new_ratio"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="150dp" />
+	<TextView
+			android:id="@+id/Title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/title"
+			android:textSize="18sp"
+			android:textColor="@color/black"
+			android:layout_marginStart="20dp"
+			android:fontFamily="@font/manrope_bold"
+			app:layout_constraintTop_toBottomOf="@+id/addnewradio_title"
+			app:layout_constraintStart_toStartOf="parent"
+			android:layout_marginTop="150dp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputTitle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/Title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+	<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/textInputTitle"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginEnd="20dp"
+			app:layout_constraintTop_toBottomOf="@id/Title"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent">
 
-        <EditText
-            android:id="@+id/editTextTitle"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:autofillHints="name"
-            android:hint="@string/add_radio_stream_title_hint_text"
-            android:ems="10"
-            android:background="@null"
-            android:inputType="text"
-            android:labelFor="@id/textInputTitle" />
-    </com.google.android.material.textfield.TextInputLayout>
+		<EditText
+				android:id="@+id/editTextTitle"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:autofillHints="name"
+				android:textSize="15sp"
+				android:hint="@string/add_radio_stream_title_hint_text"
+				android:ems="10"
+				android:background="@null"
+				android:inputType="text"
+				android:labelFor="@id/textInputTitle" />
+	</com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/URL"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/url"
-        android:textColor="#000000"
-        android:fontFamily="@font/manrope_bold"
-        app:layout_constraintTop_toBottomOf="@+id/textInputTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="22dp" />
+	<TextView
+			android:id="@+id/URL"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/url"
+			android:textSize="18sp"
+			android:textColor="@color/black"
+			android:layout_marginTop="20dp"
+			android:layout_marginStart="20dp"
+			android:fontFamily="@font/manrope_bold"
+			app:layout_constraintTop_toBottomOf="@+id/textInputTitle"
+			app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputURL"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/URL"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+	<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/textInputURL"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginStart="20dp"
+			android:layout_marginEnd="20dp"
+			app:layout_constraintTop_toBottomOf="@id/URL"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent">
 
-        <EditText
-            android:id="@+id/editTextURL"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:autofillHints="name"
-            android:hint="@string/add_radio_stream_url_hint_text"
-            android:ems="10"
-            android:background="@null"
-            android:inputType="textUri" />
-    </com.google.android.material.textfield.TextInputLayout>
+		<EditText
+				android:id="@+id/editTextURL"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:autofillHints="name"
+				android:hint="@string/add_radio_stream_url_hint_text"
+				android:ems="10"
+				android:textSize="15sp"
+				android:background="@null"
+				android:inputType="textUri" />
+	</com.google.android.material.textfield.TextInputLayout>
 
 
-    <TextView
-        android:id="@+id/add_radio_stream_select_edit_country_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:text="@string/country"
-        android:textColor="#000000"
-        android:fontFamily="@font/manrope_bold"
-        app:layout_constraintTop_toBottomOf="@id/textInputURL"
-        app:layout_constraintStart_toStartOf="parent" />
+	<TextView
+			android:id="@+id/add_radio_stream_select_edit_country_text"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:layout_marginStart="20dp"
+			android:textSize="18sp"
+			android:text="@string/country"
+			android:textColor="@color/black"
+			android:fontFamily="@font/manrope_bold"
+			app:layout_constraintTop_toBottomOf="@id/textInputURL"
+			app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-        android:id="@+id/add_radio_stream_select_edit_country_input"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/add_radio_stream_select_edit_country_text"
-        app:boxBackgroundColor="#D9D9D9">
+	<com.google.android.material.textfield.TextInputLayout
+			style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+			android:id="@+id/add_radio_stream_select_edit_country_input"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginEnd="20dp"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/add_radio_stream_select_edit_country_text"
+			app:boxBackgroundColor="@color/transparency_gray">
 
-        <AutoCompleteTextView
-            android:id="@+id/add_radio_stream_select_edit_country_default"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:inputType="none"
-            android:text="@string/kazakhstan"
-            android:fontFamily="@font/manrope_medium"
-            android:textSize="16sp"
-            android:textColor="#000000" />
-    </com.google.android.material.textfield.TextInputLayout>
+		<AutoCompleteTextView
+				android:id="@+id/add_radio_stream_select_edit_country_default"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_weight="1"
+				android:textSize="15sp"
+				android:inputType="none"
+				android:text="@string/kazakhstan"
+				android:fontFamily="@font/manrope_medium"
+				android:textColor="@color/black" />
+	</com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/add_radio_stream_text_cover_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
-        android:text="@string/cover_image"
-        android:textColor="#000000"
-        android:fontFamily="@font/manrope_bold"
-        app:layout_constraintTop_toBottomOf="@id/add_radio_stream_select_edit_country_input"
-        app:layout_constraintStart_toStartOf="parent" />
+	<TextView
+			android:id="@+id/add_radio_stream_text_cover_image"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="20dp"
+			android:layout_marginStart="20dp"
+			android:text="@string/cover_image"
+			android:textSize="18sp"
+			android:textColor="@color/black"
+			android:fontFamily="@font/manrope_bold"
+			app:layout_constraintTop_toBottomOf="@id/add_radio_stream_select_edit_country_input"
+			app:layout_constraintStart_toStartOf="parent" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputCoverImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/add_radio_stream_text_cover_image">
+	<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/textInputCoverImage"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			android:layout_marginStart="20dp"
+			android:layout_marginEnd="20dp"
+			app:layout_constraintTop_toBottomOf="@id/add_radio_stream_text_cover_image">
 
-        <EditText
-            android:id="@+id/editTextCoverImage"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="@string/select_file"
-            android:textSize="18sp"
-            android:autofillHints="name"
-            android:ems="10"
-            android:background="@null"
-            android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
+		<EditText
+				android:id="@+id/editTextCoverImage"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:hint="@string/select_file"
+				android:fontFamily="@font/manrope_medium"
+				android:textSize="15sp"
+				android:autofillHints="name"
+				android:ems="10"
+				android:background="@null"
+				android:inputType="textEmailAddress" />
+	</com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/add_radio_stream_cancel_button"
-        android:layout_width="138dp"
-        android:layout_height="60dp"
-        app:cornerRadius="4dp"
-        android:layout_marginBottom="3dp"
-        android:backgroundTint="#ffffff"
-        android:text="@string/cancel"
-        android:textAllCaps="false"
-        android:textColor="#6D6D6D"
-        android:textSize="23sp"
-        android:fontFamily="@font/manrope_medium"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:letterSpacing="0" />
+	<com.google.android.material.button.MaterialButton
+			android:id="@+id/add_radio_stream_cancel_button"
+			android:layout_width="138dp"
+			android:layout_height="60dp"
+			app:cornerRadius="4dp"
+			android:layout_marginBottom="10dp"
+			android:layout_marginStart="10dp"
+			android:backgroundTint="@color/transparency_gray"
+			android:text="@string/cancel"
+			android:textAllCaps="false"
+			android:textColor="@color/black"
+			android:textSize="23sp"
+			android:fontFamily="@font/manrope_medium"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			android:letterSpacing="0" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/add_radio_stream_save_button"
-        android:layout_width="138dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="3dp"
-        app:cornerRadius="4dp"
-        android:backgroundTint="#6D6D6D"
-        android:text="@string/save"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="23sp"
-        android:fontFamily="@font/manrope_medium"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:letterSpacing="0" />
+	<com.google.android.material.button.MaterialButton
+			android:id="@+id/add_radio_stream_save_button"
+			android:layout_width="138dp"
+			android:layout_height="60dp"
+			android:layout_marginBottom="10dp"
+			android:layout_marginEnd="10dp"
+			app:cornerRadius="4dp"
+			android:backgroundTint="#6D6D6D"
+			android:text="@string/save"
+			android:textAllCaps="false"
+			android:textColor="#FFFFFF"
+			android:textSize="23sp"
+			android:fontFamily="@font/manrope_medium"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			android:letterSpacing="0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

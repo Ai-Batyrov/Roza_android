@@ -4,7 +4,7 @@
 		android:layout_height="240dp"
 		android:layout_marginEnd="10dp"
 		xmlns:app="http://schemas.android.com/apk/res-auto"
-		app:cardBackgroundColor="?attr/colorSurfaceVariant"
+		app:cardBackgroundColor="@color/cardViewBackgroundColor"
 		android:clickable="true">
 
 	<com.google.android.material.imageview.ShapeableImageView

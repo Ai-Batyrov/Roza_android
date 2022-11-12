@@ -13,7 +13,7 @@
 			app:layout_constraintTop_toTopOf="parent"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"
-			android:text="@string/home_header_greeting_text"
+			android:text="@string/home_header_greeting"
 			android:fontFamily="@font/manrope_bold"
 			android:textSize="25sp"
 			android:layout_marginStart="8dp"
@@ -42,7 +42,7 @@
 			android:gravity="start"
 			android:fontFamily="@font/manrope_bold"
 			android:textSize="20sp"
-			android:text="@string/home_charts_recyclerView_title"
+			android:text="@string/home_chart_recyclerView_title"
 			android:layout_marginTop="10dp"
 			android:layout_marginStart="8dp" />
 
