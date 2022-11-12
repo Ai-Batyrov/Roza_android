@@ -34,7 +34,7 @@
 	<string name="settings_user_fullname">Yerkebulan Rakhmanberdi</string>
 	<string name="settings_button_text_edit_profile">Edit profile</string>
 	<string name="settings_button_text_logout">Log out</string>
-	<string name="settings_text_color_scheme">Color Scheme</string>
+	<string name="settings_text_color_scheme">App theme</string>
 	<string name="settings_text_application_color_scheme">Color Scheme</string>
 	<string name="settings_color_scheme_select_text">System</string>
 	<string name="settings_text_local_files">Local files</string>
@@ -59,7 +59,6 @@
 	<string name="versionNumber">v1.0.0</string>
 	<string name="add_radio_stream_url_hint_text">https://stream.radio.com/main.aacp</string>
 	<string name="add_radio_stream_title_hint_text">Radio Name</string>
-	<!-- TODO: Remove or change this placeholder text -->
 	<string name="hello_blank_fragment">Hello blank fragment</string>
 	<string name="bottom_nav_home_title">Home</string>
 	<string name="bottom_nav_search_title">Search</string>
@@ -70,15 +69,22 @@
 	<string name="number_of_songs">25 songs</string>
 	<string name="choose_sort_option">Choose sort option</string>
 	<string name="developers">Developers</string>
-	<string name="developer_names">Yerkebulan Rahmanberdi, Aibolat Batyrov,\n Samat Zhumamuratov, Rauan Orynbasar</string>
+	<string name="developer_names">Yerkebulan Rahmanberdi, Aibolat Batyrov, Samat Zhumamuratov, Rauan Orynbasar</string>
 	<string name="edit_profile_header_text">Edit Profile</string>
 	<string name="edit_profile_lastname">Lastname</string>
 	<string name="edit_profile_user_avatar_imageview_content_desc">Yours avatar image</string>
 	<string name="card_title_text">Title</string>
 	<string name="card_desc_text">Description</string>
+	<string name="settings_change_password">Change password</string>
+	<string name="settings_click_to_go_change_password_page">Click to go change password page</string>
 	<string-array name="sort_options">
 		<item>Date added</item>
 		<item>By song name</item>
 		<item>By artist name</item>
+	</string-array>
+	<string-array name="color_scheme_options">
+		<item>System</item>
+		<item>Light</item>
+		<item>Dark</item>
 	</string-array>
 </resources>

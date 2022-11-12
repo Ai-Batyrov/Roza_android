@@ -6,93 +6,134 @@
 		android:layout_height="match_parent"
 		tools:context=".presentation.settings.SettingsFragment">
 
-	<ImageView
-			android:id="@+id/imageButton"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			android:background="@drawable/roundcorner"
-			app:layout_constraintBottom_toBottomOf="parent"
-			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintHorizontal_bias="0.498"
-			app:layout_constraintStart_toStartOf="parent"
+	<com.google.android.material.imageview.ShapeableImageView
+			android:id="@+id/settings_user_image"
+			android:layout_width="150dp"
+			android:layout_height="150dp"
+			app:shapeAppearanceOverlay="@style/circularImageView"
+			android:scaleType="centerCrop"
+			android:background="@color/gray"
 			app:layout_constraintTop_toTopOf="parent"
-			app:layout_constraintVertical_bias="0.051"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toStartOf="parent"
+			android:layout_marginTop="40dp"
 			android:contentDescription="@string/settings_user_fullname" />
 
 	<TextView
-			android:id="@+id/textViewNameSurname"
+			android:id="@+id/settings_textview_user_fullname"
 			android:layout_width="match_parent"
-			android:layout_height="33dp"
+			android:layout_height="wrap_content"
 			android:layout_marginTop="10dp"
 			android:fontFamily="@font/manrope_bold"
 			android:text="@string/settings_user_fullname"
-			android:textColor="#000000"
+			android:textColor="@color/black"
 			android:textAlignment="center"
 			android:textSize="24sp"
 			app:layout_constraintEnd_toEndOf="parent"
 			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+			app:layout_constraintTop_toBottomOf="@+id/settings_user_image" />
 
 	<com.google.android.material.button.MaterialButton
-			android:id="@+id/editProfileButton"
+			android:id="@+id/settings_button_edit_profile"
 			android:layout_width="120dp"
 			android:layout_height="wrap_content"
 			android:backgroundTint="@color/silver"
 			android:text="@string/settings_button_text_edit_profile"
 			android:textAllCaps="false"
+			android:fontFamily="@font/manrope_medium"
 			android:layout_marginStart="70dp"
 			app:cornerRadius="10dp"
-			android:textColor="#000000"
+			android:textColor="@color/black"
 			android:letterSpacing="0"
 			android:layout_marginTop="10dp"
 			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintTop_toBottomOf="@+id/textViewNameSurname"
-			tools:layout_editor_absoluteY="185dp" />
+			app:layout_constraintTop_toBottomOf="@+id/settings_textview_user_fullname" />
 
-	<Button
-			android:id="@+id/button2"
+	<com.google.android.material.button.MaterialButton
+			android:id="@+id/settings_button_log_out"
 			android:layout_width="110dp"
 			android:layout_height="wrap_content"
 			android:backgroundTint="@color/silver"
 			android:text="@string/settings_button_text_logout"
 			android:textAllCaps="false"
+			android:fontFamily="@font/manrope_medium"
 			android:letterSpacing="0"
 			app:cornerRadius="10dp"
 			android:layout_marginEnd="80dp"
 			android:layout_marginTop="10dp"
-			android:textColor="#000000"
+			android:textColor="@color/black"
 			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintTop_toBottomOf="@+id/textViewNameSurname"
-			tools:layout_editor_absoluteY="183dp" />
+			app:layout_constraintTop_toBottomOf="@+id/settings_textview_user_fullname" />
 
-	<TextView
+	<com.google.android.material.textview.MaterialTextView
 			android:id="@+id/settings_textview_profile"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_alignParentTop="true"
 			android:gravity="center_horizontal|top"
 			android:text="@string/settings_text_profile"
-			android:textSize="25sp"
+			android:textSize="23sp"
 			android:textColor="@color/black"
-			android:textFontWeight="700"
+			android:fontFamily="@font/manrope_medium"
 			android:layout_marginStart="20dp"
-			android:layout_marginTop="10dp"
-			app:layout_constraintTop_toBottomOf="@id/editProfileButton"
+			android:layout_marginTop="20dp"
+			app:layout_constraintTop_toBottomOf="@id/settings_button_edit_profile"
 			app:layout_constraintStart_toStartOf="parent" />
 
+	<androidx.constraintlayout.widget.ConstraintLayout
+			android:id="@+id/settings_layout_change_password"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			app:layout_constraintTop_toBottomOf="@id/settings_textview_profile"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			android:paddingStart="20dp"
+			android:paddingEnd="20dp"
+			android:clickable="true">
+
+		<com.google.android.material.textview.MaterialTextView
+				android:id="@+id/settings_text_view_change_password"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:gravity="start"
+				android:text="@string/settings_change_password"
+				android:textSize="15sp"
+				android:textColor="@color/black"
+				app:layout_constraintTop_toTopOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				android:layout_marginTop="5dp" />
+
+		<com.google.android.material.textview.MaterialTextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:fontFamily="@font/manrope_light"
+				android:textSize="12sp"
+				android:text="@string/settings_click_to_go_change_password_page"
+				app:layout_constraintTop_toBottomOf="@id/settings_text_view_change_password"
+				app:layout_constraintStart_toStartOf="parent" />
+
+		<ImageView
+				android:id="@+id/settings_imageview_change_password"
+				android:layout_width="30dp"
+				android:layout_height="match_parent"
+				android:layout_gravity="end"
+				android:src="@drawable/arrow_right"
+				android:contentDescription="@string/settings_change_password"
+				app:layout_constraintEnd_toEndOf="parent" />
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
 	<TextView
-			android:id="@+id/colorSchemeTextView"
+			android:id="@+id/settings_textview_app_theme"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:layout_alignParentTop="true"
 			android:gravity="center_horizontal|top"
 			android:text="@string/settings_text_color_scheme"
-			android:textSize="25sp"
+			android:textSize="23sp"
 			android:textColor="@color/black"
-			android:textFontWeight="700"
+			android:fontFamily="@font/manrope_medium"
 			android:layout_marginStart="20dp"
 			android:layout_marginTop="10dp"
-			app:layout_constraintTop_toBottomOf="@id/settings_textview_profile"
+			app:layout_constraintTop_toBottomOf="@id/settings_layout_change_password"
 			app:layout_constraintStart_toStartOf="parent" />
 
 	<TextView
@@ -102,26 +143,26 @@
 			android:layout_alignParentTop="true"
 			android:gravity="center_horizontal|top"
 			android:text="@string/settings_text_application_color_scheme"
-			android:textSize="18sp"
+			android:textSize="15sp"
 			android:textColor="@color/black"
 			android:textFontWeight="700"
 			android:layout_marginTop="10dp"
-			app:layout_constraintTop_toBottomOf="@id/colorSchemeTextView"
-			app:layout_constraintStart_toStartOf="@id/colorSchemeTextView" />
+			app:layout_constraintTop_toBottomOf="@id/settings_textview_app_theme"
+			app:layout_constraintStart_toStartOf="@id/settings_textview_app_theme" />
 
 
 	<Spinner
 			android:id="@+id/settings_color_scheme_spinner"
 			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
+			android:layout_height="40dp"
 			android:layout_weight="1"
 			android:inputType="none"
-			android:text="@string/settings_color_scheme_select_text"
+			android:entries="@array/color_scheme_options"
 			android:fontFamily="@font/manrope_medium"
 			android:textSize="11sp"
-			android:textColor="#000000"
+			android:textColor="@color/black"
 			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintTop_toBottomOf="@id/colorSchemeTextView" />
+			app:layout_constraintTop_toBottomOf="@id/settings_textview_app_theme" />
 
 	<TextView
 			android:id="@+id/localFilesTextView"
@@ -130,11 +171,11 @@
 			android:layout_alignParentTop="true"
 			android:gravity="center_horizontal|top"
 			android:text="@string/settings_text_local_files"
-			android:textSize="25sp"
+			android:textSize="23sp"
 			android:textColor="@color/black"
-			android:textFontWeight="700"
+			android:fontFamily="@font/manrope_medium"
 			android:layout_marginStart="20dp"
-			android:layout_marginTop="10dp"
+			android:layout_marginTop="20dp"
 			app:layout_constraintTop_toBottomOf="@id/applicationColorThemeTextView"
 			app:layout_constraintStart_toStartOf="parent" />
 
@@ -145,22 +186,21 @@
 			android:layout_alignParentTop="true"
 			android:gravity="center_horizontal|top"
 			android:text="@string/settings_text_show_local_files"
-			android:textSize="18sp"
+			android:textSize="15sp"
 			android:textColor="@color/black"
-			android:textFontWeight="700"
+			android:fontFamily="@font/manrope_medium"
+			android:layout_marginStart="20dp"
 			android:layout_marginTop="10dp"
 			app:layout_constraintTop_toBottomOf="@id/localFilesTextView"
-			app:layout_constraintStart_toStartOf="@id/colorSchemeTextView" />
+			app:layout_constraintStart_toStartOf="parent" />
 
 	<com.google.android.material.materialswitch.MaterialSwitch
 			android:id="@+id/settings_switch_color_scheme"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:layout_marginTop="45dp"
-			app:layout_constraintTop_toBottomOf="@id/settings_color_scheme_spinner"
-			app:layout_constraintEnd_toEndOf="@id/settings_color_scheme_spinner"
-			tools:layout_editor_absoluteX="341dp"
-			tools:layout_editor_absoluteY="401dp" />
+			android:layout_marginEnd="20dp"
+			app:layout_constraintTop_toBottomOf="@id/localFilesTextView"
+			app:layout_constraintEnd_toEndOf="parent" />
 
 	<TextView
 			android:id="@+id/aboutTextView"
@@ -169,11 +209,11 @@
 			android:layout_alignParentTop="true"
 			android:gravity="center_horizontal|top"
 			android:text="@string/settings_text_about"
-			android:textSize="25sp"
+			android:textSize="23sp"
 			android:textColor="@color/black"
-			android:textFontWeight="700"
+			android:fontFamily="@font/manrope_medium"
 			android:layout_marginStart="20dp"
-			android:layout_marginTop="10dp"
+			android:layout_marginTop="20dp"
 			app:layout_constraintTop_toBottomOf="@id/showFromDeviceTextView"
 			app:layout_constraintStart_toStartOf="parent" />
 
@@ -186,10 +226,11 @@
 			android:text="@string/settings_text_version"
 			android:textSize="18sp"
 			android:textColor="@color/black"
-			android:textFontWeight="700"
+			android:fontFamily="@font/manrope_medium"
+			android:layout_marginStart="20dp"
 			android:layout_marginTop="10dp"
 			app:layout_constraintTop_toBottomOf="@id/aboutTextView"
-			app:layout_constraintStart_toStartOf="@id/colorSchemeTextView" />
+			app:layout_constraintStart_toStartOf="parent" />
 
 	<TextView
 			android:id="@+id/versionNumberTextView"
@@ -200,10 +241,10 @@
 			android:text="@string/settings_text_version_value"
 			android:textSize="16sp"
 			android:textColor="@color/black"
-			android:textFontWeight="700"
-			android:layout_marginTop="10dp"
+			android:fontFamily="@font/manrope_light"
+			android:layout_marginStart="20dp"
 			app:layout_constraintTop_toBottomOf="@id/versionTextView"
-			app:layout_constraintStart_toStartOf="@id/colorSchemeTextView" />
+			app:layout_constraintStart_toStartOf="parent" />
 
 	<TextView
 			android:id="@+id/developersTextView"
@@ -214,23 +255,26 @@
 			android:text="@string/developers"
 			android:textSize="18sp"
 			android:textColor="@color/black"
-			android:textFontWeight="700"
+			android:fontFamily="@font/manrope_medium"
 			android:layout_marginTop="10dp"
+			android:layout_marginStart="20dp"
 			app:layout_constraintTop_toBottomOf="@id/versionNumberTextView"
-			app:layout_constraintStart_toStartOf="@id/colorSchemeTextView" />
+			app:layout_constraintStart_toStartOf="parent" />
 
 	<TextView
 			android:id="@+id/developerNamesTextView"
-			android:layout_width="wrap_content"
+			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
 			android:layout_alignParentTop="true"
-			android:gravity="center_horizontal|top"
+			android:textAlignment="textStart"
 			android:text="@string/developer_names"
 			android:textSize="14sp"
 			android:textColor="@color/black"
-			android:textFontWeight="700"
+			android:fontFamily="@font/manrope_light"
 			android:layout_marginTop="10dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginEnd="20dp"
 			app:layout_constraintTop_toBottomOf="@id/developersTextView"
-			app:layout_constraintStart_toStartOf="@id/developersTextView" />
+			app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
