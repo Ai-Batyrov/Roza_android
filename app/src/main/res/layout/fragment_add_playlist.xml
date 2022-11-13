@@ -1,90 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.menu.playlists.AddPlaylistFragment">
-    <TextView
-        android:id="@+id/addplaylist_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/add_new_playlist_title"
-        android:visibility="visible"
-        android:textSize="22sp"
-        android:contentDescription="@string/favorites_title"
-        style="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:textAlignment="textStart"
-        android:layout_marginStart="12dp" />
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		tools:context=".presentation.menu.playlists.AddPlaylistFragment">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/addplaylist_input_title"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/addplaylist_title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="40dp">
+	<TextView
+			android:id="@+id/addplaylist_title"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/add_new_playlist_title"
+			android:visibility="visible"
+			android:textSize="23sp"
+			android:contentDescription="@string/add_new_playlist_title"
+			style="@style/TextAppearance.AppCompat.Title"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			android:textAlignment="textStart"
+			android:layout_marginStart="10dp"
+			android:layout_marginTop="10dp" />
 
-        <EditText
-            android:id="@+id/addplaylist_title_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:autofillHints="emailAddress"
-            android:ems="10"
-            android:hint="@string/title"
-            android:inputType="textEmailAddress" />
+	<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/addplaylist_input_title"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toBottomOf="@id/addplaylist_title"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			android:layout_marginStart="20dp"
+			android:layout_marginEnd="20dp"
+			app:layout_constraintBottom_toTopOf="@id/addplaylist_button_cancel">
 
-    </com.google.android.material.textfield.TextInputLayout>
+		<EditText
+				android:id="@+id/addplaylist_title_edit_text"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:autofillHints="emailAddress"
+				android:ems="10"
+				android:hint="@string/title"
+				android:inputType="textEmailAddress" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/addplaylist_input_cover_image"
-        android:layout_width="350dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/addplaylist_input_title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp">
-        <EditText
-            android:id="@+id/addplaylist_cover_image_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:autofillHints="password"
-            android:ems="10"
-            android:hint="@string/cover_image"
-            android:inputType="textPassword" />
+	</com.google.android.material.textfield.TextInputLayout>
 
-    </com.google.android.material.textfield.TextInputLayout>
+	<com.google.android.material.textfield.TextInputLayout
+			android:id="@+id/addplaylist_input_cover_image"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			app:layout_constraintTop_toBottomOf="@id/addplaylist_input_title"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			android:layout_marginTop="20dp"
+			android:layout_marginStart="20dp"
+			android:layout_marginEnd="20dp">
 
-    <Button
-        android:id="@+id/addplaylist_cancel_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#EFEFEF"
-        android:text="@string/cancel"
-        android:textColor="#383838"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:textAllCaps="false" />
+		<EditText
+				android:id="@+id/addplaylist_cover_image_edit_text"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:autofillHints="password"
+				android:ems="10"
+				android:hint="@string/cover_image"
+				android:inputType="textPassword" />
 
-    <Button
-        android:id="@+id/signInButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#ACACAC"
-        android:text="@string/save"
-        android:textAllCaps="false"
-        android:textColor="#455A64"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+	</com.google.android.material.textfield.TextInputLayout>
+
+	<com.google.android.material.button.MaterialButton
+			android:id="@+id/addplaylist_button_cancel"
+			android:layout_width="138dp"
+			android:layout_height="60dp"
+			android:layout_marginBottom="10dp"
+			android:layout_marginStart="10dp"
+			android:fontFamily="@font/manrope_medium"
+			android:backgroundTint="@color/transparency_gray"
+			android:text="@string/cancel"
+			android:textAllCaps="false"
+			app:cornerRadius="10dp"
+			android:textColor="@color/black"
+			android:textSize="23sp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintStart_toStartOf="parent" />
+
+	<com.google.android.material.button.MaterialButton
+			android:id="@+id/addnewplaylist_button_save"
+			android:layout_width="138dp"
+			android:layout_height="60dp"
+			android:layout_marginBottom="10dp"
+			android:layout_marginEnd="10dp"
+			android:fontFamily="@font/manrope_medium"
+			android:backgroundTint="@color/gray"
+			android:text="@string/save"
+			android:textAllCaps="false"
+			app:cornerRadius="10dp"
+			android:textColor="@color/white"
+			android:textSize="23sp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

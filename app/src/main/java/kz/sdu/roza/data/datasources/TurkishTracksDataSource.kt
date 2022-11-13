@@ -1,35 +1,35 @@
 package kz.sdu.roza.data.datasources
 
-import kz.sdu.roza.data.models.Track
+import kz.sdu.roza.data.entities.Track
 
 class TurkishTracksDataSource {
-    private val list = listOf<Track>(
-        Track("Her Gece", "Mirkelam"),
-        Track("Kar Beyazdır Ölüm", "Kerim Tekin"),
-        Track("İçimde Ölen Biri Var", "Ahmet Kaya"),
-        Track("Bir Sevmek Bin Defa Ölmekmiş", "Üç Hürel"),
-        Track("Hasretinle Yandı Gönlüm", "Seha Okuş "),
-        Track("Bir Çocuk Sevdim", "Sezen Aksu"),
-        Track("Ruh", "Rehber"),
-        Track("İstikrarlı Hayal", "Gaye Su Akyol"),
-        Track("Amanın Leyla", "Neşet Ertaş"),
-        Track("Unutamadım", "Müslüm Gürses"),
-        Track("Dalgalandım da Duruldum", "Müzeyyen Senar"),
-        Track("Bu Kalp Seni Unutur mu?", "Fikret Kızılok"),
-        Track("Resimdeki Gözyaşları", "Cem Karaca"),
-        Track("Dönence", "Barış Manço"),
-        Track("Arnavut Kaldırımı", "Demet Sağıroğlu"),
-        Track("Sevince", "Erkin Koray"),
-        Track("Oynama Şıkıdım", "Tarkan"),
-        Track("Bir Derdim Var", "Mor ve Ötesi"),
-        Track("Yaz Gazeteci", "Selda Bağcan"),
-        Track("Ben Şarkımı Söylerken", "Şebnem Ferah"),
-        Track("Summertime", "Cem Adrian"),
-        Track("Everything That I Can", "Sertab Erener"),
-        Track("Güneş Toğla Benim İçin", "Ali İhsan"),
-        Track("Here I am Zeki Müren", "Zeki Müren"),
-        Track("Geççek", "TARKAN"),
-        Track("Canıma Minnet", "Sakiler"),
+    private val list = listOf(
+        Track("uiid-1", "Her Gece", "Mirkelam", "/url/img.png"),
+        Track("uiid-1", "Kar Beyazdır Ölüm", "Kerim Tekin", "/url/img.png"),
+        Track("uiid-1", "İçimde Ölen Biri Var", "Ahmet Kaya", "/url/img.png"),
+        Track("uiid-1", "Bir Sevmek Bin Defa Ölmekmiş", "Üç Hürel", "/url/img.png"),
+        Track("uiid-1", "Hasretinle Yandı Gönlüm", "Seha Okuş", "/url/img.png"),
+        Track("uiid-1", "Bir Çocuk Sevdim", "Sezen Aksu", "/url/img.png"),
+        Track("uiid-1", "Ruh", "Rehber", "/url/img.png"),
+        Track("uiid-1", "İstikrarlı Hayal", "Gaye Su Akyol", "/url/img.png"),
+        Track("uiid-1", "Amanın Leyla", "Neşet Ertaş", "/url/img.png"),
+        Track("uiid-1", "Unutamadım", "Müslüm Gürses", "/url/img.png"),
+        Track("uiid-1", "Dalgalandım da Duruldum", "Müzeyyen Senar", "/url/img.png"),
+        Track("uiid-1", "Bu Kalp Seni Unutur mu?", "Fikret Kızılok", "/url/img.png"),
+        Track("uiid-1", "Resimdeki Gözyaşları", "Cem Karaca", "/url/img.png"),
+        Track("uiid-1", "Dönence", "Barış Manço", "/url/img.png"),
+        Track("uiid-1", "Arnavut Kaldırımı", "Demet Sağıroğlu", "/url/img.png"),
+        Track("uiid-1", "Sevince", "Erkin Koray", "/url/img.png"),
+        Track("uiid-1", "Oynama Şıkıdım", "Tarkan", "/url/img.png"),
+        Track("uiid-1", "Bir Derdim Var", "Mor ve Ötesi", "/url/img.png"),
+        Track("uiid-1", "Yaz Gazeteci", "Selda Bağcan", "/url/img.png"),
+        Track("uiid-1", "Ben Şarkımı Söylerken", "Şebnem Ferah", "/url/img.png"),
+        Track("uiid-1", "Summertime", "Cem Adrian", "/url/img.png"),
+        Track("uiid-1", "Everything That I Can", "Sertab Erener", "/url/img.png"),
+        Track("uiid-1", "Güneş Toğla Benim İçin", "Ali İhsan", "/url/img.png"),
+        Track("uiid-1", "Here I am Zeki Müren", "Zeki Müren", "/url/img.png"),
+        Track("uiid-1", "Geççek", "TARKAN", "/url/img.png"),
+        Track("uiid-1", "Canıma Minnet", "Sakiler", "/url/img.png"),
     )
 
     fun loadTracks(): List<Track> {
