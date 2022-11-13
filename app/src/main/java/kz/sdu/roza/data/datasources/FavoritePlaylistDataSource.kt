@@ -1,7 +1,7 @@
 package kz.sdu.roza.data.datasources
 
 import kz.sdu.roza.data.enums.DataSourceTypes
-import kz.sdu.roza.data.models.Track
+import kz.sdu.roza.data.entities.Track
 
 class FavoritePlaylistDataSource(
 ) : PlaylistDataSource() {
@@ -19,5 +19,4 @@ class FavoritePlaylistDataSource(
     override fun setData(data: List<Track>) {
         playlist = data
     }
-
 }

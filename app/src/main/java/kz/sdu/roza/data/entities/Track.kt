@@ -1,4 +1,4 @@
-package kz.sdu.roza.data.models
+package kz.sdu.roza.data.entities
 
 data class Track(
     val uuid: String,

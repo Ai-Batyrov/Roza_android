@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kz.sdu.roza.R
-import kz.sdu.roza.data.models.Chart
+import kz.sdu.roza.data.entities.Chart
 
 class ChartListAdapter(private val dataSet: List<Chart>) :
     RecyclerView.Adapter<ChartListAdapter.ChartsListViewHolder>() {

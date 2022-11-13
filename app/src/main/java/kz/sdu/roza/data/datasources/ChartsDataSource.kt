@@ -1,6 +1,6 @@
 package kz.sdu.roza.data.datasources
 
-import kz.sdu.roza.data.models.Chart
+import kz.sdu.roza.data.entities.Chart
 
 class ChartsDataSource : ListsDataSource() {
     private lateinit var charts: List<Chart>

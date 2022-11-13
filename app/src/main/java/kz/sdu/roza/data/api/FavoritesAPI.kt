@@ -1,15 +1,15 @@
 package kz.sdu.roza.data.api
 
-import kz.sdu.roza.data.models.Track
+import kz.sdu.roza.data.entities.Track
 
-data class FavoritesAPI(val api: String) : BaseAPI {
+class FavoritesAPI : BaseAPI {
     private lateinit var message: String
-    private lateinit var data: MutableMap<String, List<Track>?>
+    private lateinit var data: MutableMap<String, MutableList<Track>?>
 
-    override fun fetchResource() {
+    init {
         message = "Resource are loaded"
         data = mutableMapOf(
-            "tracks" to listOf(
+            "tracks" to mutableListOf(
                 Track("uiid-1", "Say My Name", "David Guetta, Bebe Rexha, JBalvin", "/url/img.png"),
                 Track("uiid-1", "Wake Me Up", "Avicii", "/url/img.png"),
                 Track("uiid-1", "Şımarık", "Tarkan", "/url/img.png"),
@@ -28,8 +28,14 @@ data class FavoritesAPI(val api: String) : BaseAPI {
         return message
     }
 
-    override fun getData(): MutableMap<String, List<Track>?> {
+    override fun getData(): MutableMap<String, MutableList<Track>?> {
         return data
+    }
+
+    @Suppress("UNREACHABLE_CODE")
+    override fun insertItem(item: Any?) {
+        TODO("Пока что оставим данные локально")
+        data["tracks"]?.add(item as Track)
     }
 
 }

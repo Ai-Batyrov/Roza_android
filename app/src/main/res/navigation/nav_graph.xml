@@ -9,7 +9,11 @@
 			android:id="@+id/homeMainFragment"
 			android:name="kz.sdu.roza.presentation.menu.home.HomeMainFragment"
 			android:label="fragment_home_main"
-			tools:layout="@layout/fragment_home_main" />
+			tools:layout="@layout/fragment_home_main">
+		<action
+				android:id="@+id/action_homeMainFragment_to_chartFragment"
+				app:destination="@id/chartFragment" />
+	</fragment>
 	<fragment
 			android:id="@+id/settingsFragment"
 			android:name="kz.sdu.roza.presentation.settings.SettingsFragment"
@@ -47,7 +51,11 @@
 			android:id="@+id/burgerMenuFragment"
 			android:name="kz.sdu.roza.presentation.menu.burgermenu.BurgerMenuFragment"
 			android:label="fragment_burger_menu"
-			tools:layout="@layout/fragment_burger_menu" />
+			tools:layout="@layout/fragment_burger_menu">
+		<action
+				android:id="@+id/action_burgerMenuFragment_to_settingsFragment"
+				app:destination="@id/settingsFragment" />
+	</fragment>
 	<fragment
 			android:id="@+id/favoritesMainFragment"
 			android:name="kz.sdu.roza.presentation.menu.favorites.FavoritesMainFragment"

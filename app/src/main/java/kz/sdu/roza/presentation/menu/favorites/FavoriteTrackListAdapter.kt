@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kz.sdu.roza.R
-import kz.sdu.roza.data.models.Track
+import kz.sdu.roza.data.entities.Track
 
 class FavoriteTrackListAdapter(
     private val dataset: List<Track>

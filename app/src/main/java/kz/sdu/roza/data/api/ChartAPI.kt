@@ -1,12 +1,12 @@
 package kz.sdu.roza.data.api
 
-import kz.sdu.roza.data.models.Chart
+import kz.sdu.roza.data.entities.Chart
 
-data class ChartAPI(val api: String) : BaseAPI {
+class ChartAPI(val api: String) : BaseAPI {
     private lateinit var message: String
     private lateinit var data: MutableMap<String, List<Chart>>
 
-    override fun fetchResource() {
+    init {
         message = "Resource are loaded"
         data = mutableMapOf(
             "charts" to listOf(
@@ -35,5 +35,9 @@ data class ChartAPI(val api: String) : BaseAPI {
 
     override fun getData(): Map<String, List<Chart>> {
         return data
+    }
+
+    override fun insertItem(item: Any?) {
+        TODO("Not yet implemented")
     }
 }

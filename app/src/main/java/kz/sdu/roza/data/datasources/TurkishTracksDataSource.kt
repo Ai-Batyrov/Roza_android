@@ -1,6 +1,6 @@
 package kz.sdu.roza.data.datasources
 
-import kz.sdu.roza.data.models.Track
+import kz.sdu.roza.data.entities.Track
 
 class TurkishTracksDataSource {
     private val list = listOf(
