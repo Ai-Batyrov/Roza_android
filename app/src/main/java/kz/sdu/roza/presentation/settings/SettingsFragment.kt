@@ -24,7 +24,7 @@ class SettingsFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-    private lateinit var btn: Button
+    private lateinit var editProfileButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,8 +39,8 @@ class SettingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_settings, container, false)
-        btn = view.findViewById(R.id.editProfileButton)
-        btn.setOnClickListener {
+        editProfileButton = view.findViewById(R.id.editProfileButton)
+        editProfileButton.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.editProfileFragment)
         }
         return view

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.Navigation
 import kz.sdu.roza.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -23,6 +24,8 @@ class EditProfileFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var cancelButton: Button
+    private lateinit var saveButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,6 +41,14 @@ class EditProfileFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_edit_profile, container, false)
+        cancelButton = view.findViewById(R.id.cancelButton)
+        saveButton = view.findViewById(R.id.saveButton)
+        cancelButton.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.settingsFragment)
+        }
+        saveButton.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.settingsFragment)
+        }
         return view
     }
 
