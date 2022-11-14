@@ -5,17 +5,37 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.button.MaterialButton
+import com.google.android.material.textfield.TextInputEditText
 import kz.sdu.roza.databinding.FragmentSearchMainBinding
 
 private const val ARG_PARAM1 = "param1"
 
 class SearchMainFragment : Fragment() {
     private var param1: String? = null
+
     private var _binding: FragmentSearchMainBinding? = null
     private val binding: FragmentSearchMainBinding get() = _binding!!
+    private val searchViewModel: SearchResultsViewModel by viewModels(
+        factoryProducer = { SearchResultsFactory(context = requireContext()) }
+    )
+    private lateinit var results: RecyclerView
+    private lateinit var searchButton: MaterialButton
+    private lateinit var textInput: TextInputEditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+//        searchViewModel =
+//            ViewModelProvider(
+//                this,
+//                SearchResultsFactory(context = requireContext())
+//            )[SearchResultsViewModel::class.java]
+
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
         }
@@ -26,11 +46,20 @@ class SearchMainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSearchMainBinding.inflate(inflater, container, false)
-        return binding.root
-    }
+        searchButton = binding.searchButtonSearch
+        textInput = binding.searchSearchBarEditText
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        results = binding.searchResultsRecyclerView
+        results.layoutManager = LinearLayoutManager(activity)
+        searchViewModel.searchResults.observe(viewLifecycleOwner) { resultsData ->
+            results.adapter = SearchResultsAdapter(resultsData)
+        }
+        searchButton.setOnClickListener {
+            searchViewModel.searchResults(textInput.text.toString())
+        }
+        results.setHasFixedSize(true)
+
+        return binding.root
     }
 
     override fun onDestroyView() {

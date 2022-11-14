@@ -5,15 +5,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kz.sdu.roza.R
+import kz.sdu.roza.data.entities.Chart
 import kz.sdu.roza.data.repository.ChartsRepository
+import kz.sdu.roza.databinding.FragmentHomeMainBinding
 
 private const val CHARTS_TITLE = "Top charts"
 
 class HomeMainFragment : Fragment() {
     private var chartTitle: String? = null
+
+    private var _binding: FragmentHomeMainBinding? = null
+    private val binding: FragmentHomeMainBinding get() = _binding!!
 
     private lateinit var chartsList: RecyclerView
     private lateinit var dataSource: ChartsRepository
@@ -28,17 +36,21 @@ class HomeMainFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_home_main, container, false)
+    ): View {
+        _binding = FragmentHomeMainBinding.inflate(inflater, container, false)
         dataSource = ChartsRepository()
 
-        chartsList = view.findViewById(R.id.home_chart_recyclerView)
+        chartsList = binding.homeChartRecyclerView
         chartsList.layoutManager =
             LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         chartsList.adapter = ChartListAdapter(dataSource.getChartList())
         chartsList.setHasFixedSize(true)
 
-        return view
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
     companion object {
