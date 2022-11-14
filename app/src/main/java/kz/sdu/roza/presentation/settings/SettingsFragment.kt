@@ -15,7 +15,7 @@ private const val USER_AVATAR_IMAGE_URL = "param2"
 
 class SettingsFragment : Fragment() {
     private var _binding: FragmentSettingsBinding? = null
-    private val binding: FragmentSettingsBinding = _binding!!
+    private val binding: FragmentSettingsBinding get() = _binding!!
 
     private var userFullName: String? = null
     private var userAvatarImageUrl: String? = null
@@ -35,7 +35,7 @@ class SettingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
-        btn = binding.settingsButtonEditProfile
+        btn = _binding!!.settingsButtonEditProfile
         btn.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.editProfileFragment)
         }

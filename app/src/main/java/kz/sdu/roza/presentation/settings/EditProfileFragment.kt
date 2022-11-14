@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.Navigation
 import kz.sdu.roza.R
 import kz.sdu.roza.databinding.FragmentEditProfileBinding
 
@@ -16,7 +17,10 @@ private const val USER_EMAIL = "aibolat.batyrov.03@gmail.com"
 
 class EditProfileFragment : Fragment() {
     private var _binding: FragmentEditProfileBinding? = null
-    private val binding: FragmentEditProfileBinding = _binding!!
+    private val binding: FragmentEditProfileBinding get() = _binding!!
+
+    private lateinit var cancelButton: Button
+    private lateinit var saveButton: Button
 
     private var userAvatarImageUrl: String? = null
     private var userFirstName: String? = null
@@ -41,6 +45,18 @@ class EditProfileFragment : Fragment() {
         _binding = FragmentEditProfileBinding.inflate(inflater, container, false)
         binding.editProfileEdittextFirstname.setText(userFirstName)
         binding.editProfileEdittextLastname.setText(userLastName)
+
+        cancelButton = _binding!!.editProfileButtonCancel
+        saveButton = _binding!!.editProfileButtonSave
+
+        cancelButton.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.settingsFragment)
+        }
+
+        saveButton.setOnClickListener {
+            Navigation.findNavController(binding.root).navigate(R.id.settingsFragment)
+        }
+
         return binding.root
     }
 
