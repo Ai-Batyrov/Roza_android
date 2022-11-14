@@ -20,7 +20,7 @@
 				android:layout_height="wrap_content"
 				android:text="@string/favorites_title"
 				android:visibility="visible"
-				android:textSize="30sp"
+				android:textSize="26sp"
 				android:contentDescription="@string/favorites_title"
 				style="@style/TextAppearance.AppCompat.Title"
 				app:layout_constraintStart_toStartOf="parent"
