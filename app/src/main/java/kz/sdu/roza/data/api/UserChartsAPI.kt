@@ -2,9 +2,9 @@ package kz.sdu.roza.data.api
 
 import kz.sdu.roza.data.entities.Chart
 
-class ChartAPI(val api: String) : BaseAPI {
-    private lateinit var message: String
-    private lateinit var data: MutableMap<String, List<Chart>>
+class UserChartsAPI(val api: String) : BaseAPI {
+    private var message: String = ""
+    private var data: MutableMap<String, List<Chart>> = mutableMapOf()
 
     init {
         message = "Resource are loaded"

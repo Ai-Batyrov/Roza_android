@@ -83,6 +83,8 @@
 	<string name="home_header_greeting">Welcome, Aibolat Batyrov</string>
 	<string name="home_header_text">Today\'s recommendations for you</string>
 	<string name="home_chart_recyclerView_title">Top mixes</string>
+	<string name="single_chart_title">High Energy Songs</string>
+	<string name="single_chart_count">25 songs</string>
 	<string-array name="sort_options">
 		<item>Date added</item>
 		<item>By song name</item>
