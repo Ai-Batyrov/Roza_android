@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.Navigation
+import com.google.android.material.button.MaterialButton
 import kz.sdu.roza.R
 import kz.sdu.roza.databinding.FragmentSettingsBinding
 
@@ -20,7 +21,7 @@ class SettingsFragment : Fragment() {
     private var userFullName: String? = null
     private var userAvatarImageUrl: String? = null
 
-    private lateinit var btn: Button
+    private lateinit var editProfileButton: MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,9 +36,10 @@ class SettingsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
-        btn = _binding!!.settingsButtonEditProfile
-        btn.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.editProfileFragment)
+        editProfileButton = _binding!!.settingsButtonEditProfile
+        editProfileButton.setOnClickListener {
+            Navigation.findNavController(binding.root)
+                .navigate(R.id.action_settingsFragment_to_editProfileFragment)
         }
 
         return binding.root

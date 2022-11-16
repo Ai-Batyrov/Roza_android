@@ -43,7 +43,8 @@ class ChartListAdapter(
             bundle.putInt("id", item.id)
             bundle.putString("title", item.title)
 
-            holder.itemView.findNavController().navigate(R.id.chartFragment, bundle)
+            holder.itemView.findNavController()
+                .navigate(R.id.action_homeMainFragment_to_chartFragment, bundle)
         }
 
         holder.bind(item)
