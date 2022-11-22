@@ -3,11 +3,9 @@ package kz.sdu.roza.presentation.menu.home
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kz.sdu.roza.R
-import kz.sdu.roza.data.entities.Chart
 import kz.sdu.roza.data.entities.Track
 
 class SingleChartViewAdapter(private val dataSet: List<Track>) :

@@ -10,13 +10,15 @@ import android.widget.AutoCompleteTextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kz.sdu.roza.R
-import kz.sdu.roza.data.datasources.TurkishTracksDataSource
+import kz.sdu.roza.data.repository.FavoritePlaylistRepository
 
 private const val TRACK_COUNT = "0"
 
 class PlaylistFragment : Fragment() {
     private lateinit var trackList: RecyclerView
     private var trackCount: String? = null
+
+    private var repository: FavoritePlaylistRepository = FavoritePlaylistRepository()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +34,7 @@ class PlaylistFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_playlist, container, false)
         trackList = view.findViewById(R.id.playlist_recycler_view)
         trackList.layoutManager = LinearLayoutManager(activity)
-        trackList.adapter = PlaylistAdapter(TurkishTracksDataSource().loadTracks())
+        trackList.adapter = PlaylistAdapter(repository.getPlaylist())
         val sortOptions = resources.getStringArray(R.array.sort_options)
         val arrayAdapter = ArrayAdapter(view.context, R.layout.dropdown_item, sortOptions)
         val autoCompleteTV = view.findViewById<AutoCompleteTextView>(R.id.sortByTextView)

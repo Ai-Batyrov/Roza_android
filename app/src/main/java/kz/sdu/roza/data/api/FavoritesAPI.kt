@@ -10,16 +10,16 @@ class FavoritesAPI : BaseAPI {
         message = "Resource are loaded"
         data = mutableMapOf(
             "tracks" to mutableListOf(
-                Track("uiid-1", "Say My Name", "David Guetta, Bebe Rexha, JBalvin", "/url/img.png"),
-                Track("uiid-1", "Wake Me Up", "Avicii", "/url/img.png"),
-                Track("uiid-1", "Şımarık", "Tarkan", "/url/img.png"),
-                Track("uiid-1", "Jackie Chan", "Tiesto, Dzeko, Preme, Post Malone", "/url/img.png"),
-                Track("uiid-1", "Duality", "Nicky Romero", "/url/img.png"),
-                Track("uiid-1", "Sunwaves", "Slider & Magnit, Radio Killer", "/url/img.png"),
-                Track("uiid-1", "Cartier", "Dopebwoy, 3robi, Chivv", "/url/img.png"),
-                Track("uiid-1", "Thumbs", "Sabrina Carpenter", "/url/img.png"),
-                Track("uiid-1", "Blinding Lights", "The Weeknd", "/url/img.png"),
-                Track("uiid-1", "Attention", "Charlie Puth", "/url/img.png")
+                Track(1, "uiid-1", "Say My Name", "David Guetta, Bebe Rexha, JBalvin"),
+                Track(2, "uiid-1", "Wake Me Up", "Avicii"),
+                Track(3, "uiid-1", "Şımarık", "Tarkan"),
+                Track(4, "uiid-1", "Jackie Chan", "Tiesto, Dzeko, Preme, Post Malone"),
+                Track(5, "uiid-1", "Duality", "Nicky Romero"),
+                Track(6, "uiid-1", "Sunwaves", "Slider & Magnit, Radio Killer"),
+                Track(7, "uiid-1", "Cartier", "Dopebwoy, 3robi, Chivv"),
+                Track(8, "uiid-1", "Thumbs", "Sabrina Carpenter"),
+                Track(9, "uiid-1", "Blinding Lights", "The Weeknd"),
+                Track(10, "uiid-1", "Attention", "Charlie Puth")
             )
         )
     }

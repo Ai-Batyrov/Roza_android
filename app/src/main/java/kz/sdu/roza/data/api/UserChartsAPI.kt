@@ -10,20 +10,18 @@ class UserChartsAPI(val api: String) : BaseAPI {
         message = "Resource are loaded"
         data = mutableMapOf(
             "charts" to listOf(
-                Chart(1, "Dancehall Hits", "Dopebwoy, JBalvin and more", "img/chart_cover"),
-                Chart(2, "High Energy Songs", "Minelli, Inna, Ava Max and more", "img/chart_cover"),
-                Chart(3, "House Mix", "David Guetta, Ilkay Sencan and more", "img/chart_cover"),
+                Chart(1, "Dancehall Hits", "Dopebwoy, JBalvin and more"),
+                Chart(2, "High Energy Songs", "Minelli, Inna, Ava Max and more"),
+                Chart(3, "House Mix", "David Guetta, Ilkay Sencan and more"),
                 Chart(
                     4,
                     "Classic Songs",
                     "Dan Berk, The Irrepressobles and more",
-                    "img/chart_cover"
                 ),
                 Chart(
                     5,
                     "Kazakh Folk Songs",
                     "Toregali Toreali, Kairat Nurtas and more",
-                    "img/chart_cover"
                 ),
             )
         )
