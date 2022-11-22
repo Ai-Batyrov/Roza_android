@@ -6,20 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
-import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
 import kz.sdu.roza.R
 import kz.sdu.roza.databinding.FragmentEditProfileBinding
 
-private const val USER_AVATAR_IMAGE_URL = "param1"
-private const val USER_FIRSTNAME = "Aibolat"
-private const val USER_LASTNAME = "Batyrov"
-private const val USER_EMAIL = "aibolat.batyrov.03@gmail.com"
+private const val USER_AVATAR_IMAGE_URL = "user_avatar_image_url"
+private const val USER_FIRSTNAME = "user_firstname"
+private const val USER_LASTNAME = "user_lastname"
+private const val USER_EMAIL = "user_email"
 
 class EditProfileFragment : Fragment() {
     private var _binding: FragmentEditProfileBinding? = null
     private val binding: FragmentEditProfileBinding get() = _binding!!
-    private val viewModel: SettingsViewModel by activityViewModels()
+
     private lateinit var cancelButton: Button
     private lateinit var saveButton: Button
 
@@ -45,22 +44,22 @@ class EditProfileFragment : Fragment() {
     ): View {
         _binding = FragmentEditProfileBinding.inflate(inflater, container, false)
 
-        cancelButton = _binding!!.editProfileButtonCancel
-        saveButton = _binding!!.editProfileButtonSave
+        cancelButton = binding.editProfileButtonCancel
+        saveButton = binding.editProfileButtonSave
+
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         cancelButton.setOnClickListener {
             Navigation.findNavController(binding.root).navigate(R.id.settingsFragment)
         }
 
         saveButton.setOnClickListener {
-            viewModel.updateInfo(
-                binding.editProfileEdittextFirstname.text.toString(),
-                binding.editProfileEdittextLastname.text.toString(),
-            )
             Navigation.findNavController(binding.root).navigate(R.id.settingsFragment)
         }
-
-        return binding.root
     }
 
     companion object {

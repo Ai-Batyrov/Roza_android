@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import com.google.android.material.button.MaterialButton
 import kz.sdu.roza.R
@@ -22,6 +23,8 @@ class SettingsFragment : Fragment() {
 
     private lateinit var editProfileButton: MaterialButton
 
+    private val viewModel: SettingsViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -36,12 +39,16 @@ class SettingsFragment : Fragment() {
     ): View {
         _binding = FragmentSettingsBinding.inflate(inflater, container, false)
         editProfileButton = binding.settingsButtonEditProfile
+
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         editProfileButton.setOnClickListener {
             Navigation.findNavController(binding.root)
                 .navigate(R.id.action_settingsFragment_to_editProfileFragment)
         }
-
-        return binding.root
     }
 
     companion object {
