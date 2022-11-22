@@ -5,24 +5,34 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import com.google.android.material.imageview.ShapeableImageView
 import kz.sdu.roza.R
 import kz.sdu.roza.databinding.FragmentBurgerMenuBinding
+import java.net.URL
 
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+private const val USER_FULL_NAME = "user_full_name"
+private const val USER_IMAGE_URL = "user_image_url"
 
 class BurgerMenuFragment : Fragment() {
+    private var userFullName: String? = null
+    private var userImageURL: String? = null
+
     private var _binding: FragmentBurgerMenuBinding? = null
     private val binding: FragmentBurgerMenuBinding get() = _binding!!
 
-    private lateinit var avatar: ShapeableImageView
+    private lateinit var settingsLayout: ConstraintLayout
+    private lateinit var radioStationsLayout: ConstraintLayout
+    private lateinit var playlistsLayout: ConstraintLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {}
+        arguments?.let { bundle ->
+            userFullName = bundle.getString(USER_FULL_NAME)
+            userImageURL = bundle.getString(USER_IMAGE_URL)
+        }
     }
 
     override fun onCreateView(
@@ -30,20 +40,33 @@ class BurgerMenuFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentBurgerMenuBinding.inflate(inflater, container, false)
-        avatar = _binding!!.burgerMenuSettingsUserImage
-        avatar.setOnClickListener { view: View ->
-            view.findNavController().navigate(R.id.action_burgerMenuFragment_to_settingsFragment)
-        }
+        settingsLayout = binding.burgerMenuLayoutSettings
+        radioStationsLayout = binding.burgerMenuLayoutRadioStations
+        playlistsLayout = binding.burgerMenuLayoutPlaylists
+
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        settingsLayout.setOnClickListener {
+            binding.root.findNavController()
+                .navigate(R.id.action_burgerMenuFragment_to_settingsFragment)
+        }
+        playlistsLayout.setOnClickListener {
+            binding.root.findNavController()
+                .navigate(R.id.playlistFragment)
+
+        }
     }
 
     companion object {
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
+        fun newInstance(userFullName: String, userImageURL: String) =
             BurgerMenuFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    putString(USER_FULL_NAME, userFullName)
+                    putString(USER_IMAGE_URL, userImageURL)
                 }
             }
     }
