@@ -5,28 +5,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.activityViewModels
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
+import com.google.android.material.button.MaterialButton
 import kz.sdu.roza.R
-import kz.sdu.roza.data.entities.Profile
 import kz.sdu.roza.databinding.FragmentSettingsBinding
 
-private const val USER_FULL_NAME = "param1"
-private const val USER_AVATAR_IMAGE_URL = "param2"
+private const val USER_FULL_NAME = "user_full_name"
+private const val USER_AVATAR_IMAGE_URL = "user_avatar_image_url"
 
 class SettingsFragment : Fragment() {
-    private lateinit var binding: FragmentSettingsBinding
-
-    private val viewModel: SettingsViewModel by activityViewModels()
+    private var _binding: FragmentSettingsBinding? = null
+    private val binding: FragmentSettingsBinding get() = _binding!!
 
     private var userFullName: String? = null
     private var userAvatarImageUrl: String? = null
 
-    private lateinit var btn: Button
+    private lateinit var editProfileButton: MaterialButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,18 +34,14 @@ class SettingsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_settings, container, false)
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        btn = binding.settingsButtonEditProfile
-        btn.setOnClickListener {
-            Navigation.findNavController(binding.root).navigate(R.id.editProfileFragment)
+        _binding = FragmentSettingsBinding.inflate(inflater, container, false)
+        editProfileButton = binding.settingsButtonEditProfile
+        editProfileButton.setOnClickListener {
+            Navigation.findNavController(binding.root)
+                .navigate(R.id.action_settingsFragment_to_editProfileFragment)
         }
-        binding.settingsViewModel = viewModel
-        binding.lifecycleOwner = viewLifecycleOwner
+
+        return binding.root
     }
 
     companion object {
