@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.activityViewModels
 import androidx.navigation.Navigation
 import kz.sdu.roza.R
 import kz.sdu.roza.databinding.FragmentEditProfileBinding
@@ -18,7 +19,7 @@ private const val USER_EMAIL = "aibolat.batyrov.03@gmail.com"
 class EditProfileFragment : Fragment() {
     private var _binding: FragmentEditProfileBinding? = null
     private val binding: FragmentEditProfileBinding get() = _binding!!
-
+    private val viewModel: SettingsViewModel by activityViewModels()
     private lateinit var cancelButton: Button
     private lateinit var saveButton: Button
 
@@ -43,8 +44,6 @@ class EditProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentEditProfileBinding.inflate(inflater, container, false)
-        binding.editProfileEdittextFirstname.setText(userFirstName)
-        binding.editProfileEdittextLastname.setText(userLastName)
 
         cancelButton = _binding!!.editProfileButtonCancel
         saveButton = _binding!!.editProfileButtonSave
@@ -54,6 +53,10 @@ class EditProfileFragment : Fragment() {
         }
 
         saveButton.setOnClickListener {
+            viewModel.updateInfo(
+                binding.editProfileEdittextFirstname.text.toString(),
+                binding.editProfileEdittextLastname.text.toString(),
+            )
             Navigation.findNavController(binding.root).navigate(R.id.settingsFragment)
         }
 
