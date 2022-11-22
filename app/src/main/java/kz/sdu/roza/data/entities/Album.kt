@@ -3,6 +3,9 @@ package kz.sdu.roza.data.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.TypeConverters
+import kz.sdu.roza.data.entities.converters.DateConverter
+import java.util.*
 
 @Entity(tableName = "albums")
 data class Album(
@@ -13,8 +16,8 @@ data class Album(
     val title: String,
 
     @ColumnInfo(name = "created_at")
-    val created_at: String,
+    val createdAt: String,
 
     @ColumnInfo(name = "updated_at")
-    val updated_at: String,
+    val updatedAt: String
 )
