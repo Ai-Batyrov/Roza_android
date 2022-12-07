@@ -3,9 +3,6 @@ package kz.sdu.roza.data.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.room.TypeConverters
-import kz.sdu.roza.data.entities.converters.DateConverter
-import java.util.*
 
 @Entity(tableName = "albums")
 data class Album(

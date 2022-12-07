@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "411645324367",
+    "project_id": "roza-e34de",
+    "storage_bucket": "roza-e34de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:411645324367:android:a1240893f62bb02bb68e3a",
+        "android_client_info": {
+          "package_name": "kz.sdu.roza"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "411645324367-c6dquh77641pplff69j8gnpnooutngfk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLzOwjLalUSE-rBv40F_D-IoeWLE_2ty4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "411645324367-c6dquh77641pplff69j8gnpnooutngfk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
