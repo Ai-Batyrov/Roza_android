@@ -1,200 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:fillViewport="false">
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:fillViewport="false">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context=".presentation.settings.EditProfileFragment">
+	<androidx.constraintlayout.widget.ConstraintLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			tools:context=".presentation.settings.EditProfileFragment">
 
-        <TextView
-            android:id="@+id/edit_profile_header_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:height="27dp"
-            android:fontFamily="@font/manrope_bold"
-            android:gravity="center_horizontal|top"
-            android:lineHeight="27.32dp"
-            android:text="@string/edit_profile_header_text"
-            android:textAlignment="center"
-            android:textColor="#565656"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+		<TextView
+				android:id="@+id/edit_profile_header_text"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:layout_marginTop="10dp"
+				android:height="27dp"
+				android:fontFamily="@font/manrope_bold"
+				android:gravity="center_horizontal|top"
+				android:lineHeight="27.32dp"
+				android:text="@string/edit_profile_header_text"
+				android:textAlignment="center"
+				android:textColor="#565656"
+				android:textSize="20sp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
-            android:id="@+id/edit_profile_image_button"
-            android:layout_width="128dp"
-            android:layout_height="107dp"
-            android:layout_marginTop="20dp"
-            android:contentDescription="@string/edit_profile_user_avatar_imageview_content_desc"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_profile_header_text" />
+		<ImageButton
+				android:id="@+id/edit_profile_image_button"
+				android:layout_width="128dp"
+				android:layout_height="107dp"
+				android:layout_marginTop="20dp"
+				android:contentDescription="@string/edit_profile_user_avatar_imageview_content_desc"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/edit_profile_header_text" />
 
-        <TextView
-            android:id="@+id/edit_profile_textview_firstname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="22dp"
-            android:fontFamily="@font/manrope_bold"
-            android:text="@string/firstname"
-            android:textColor="#000000"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_profile_image_button" />
+		<TextView
+				android:id="@+id/edit_profile_textview_username"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:layout_marginTop="22dp"
+				android:fontFamily="@font/manrope_bold"
+				android:text="@string/username"
+				android:textColor="#000000"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/edit_profile_image_button" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edit_profile_textInputLayout_firstname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_profile_textview_firstname">
+		<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/edit_profile_textInputLayout_username"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:layout_marginEnd="10dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/edit_profile_textview_username">
 
-            <EditText
-                android:id="@+id/edit_profile_edittext_firstname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autofillHints="name"
-                android:background="@null"
-                android:ems="10"
-                android:inputType="textPersonName" />
-        </com.google.android.material.textfield.TextInputLayout>
+			<EditText
+					android:id="@+id/edit_profile_edittext_username"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:autofillHints="name"
+					android:background="@null"
+					android:ems="10"
+					android:inputType="text" />
+		</com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/edit_profile_textview_lastname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="22dp"
-            android:fontFamily="@font/manrope_bold"
-            android:text="@string/edit_profile_lastname"
-            android:textColor="#000000"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_profile_textInputLayout_firstname" />
+		<TextView
+				android:id="@+id/edit_profile_textview_firstname"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:layout_marginTop="22dp"
+				android:fontFamily="@font/manrope_bold"
+				android:text="@string/firstname"
+				android:textColor="#000000"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/edit_profile_textInputLayout_username" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edit_profile_textInputLayout_lastname"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_profile_textview_lastname">
+		<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/edit_profile_textInputLayout_firstname"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:layout_marginEnd="10dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/edit_profile_textview_firstname">
 
-            <EditText
-                android:id="@+id/edit_profile_edittext_lastname"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autofillHints="name"
-                android:background="@null"
-                android:ems="10"
-                android:inputType="textPersonName" />
-        </com.google.android.material.textfield.TextInputLayout>
+			<EditText
+					android:id="@+id/edit_profile_edittext_firstname"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:autofillHints="name"
+					android:background="@null"
+					android:ems="10"
+					android:inputType="textPersonName" />
+		</com.google.android.material.textfield.TextInputLayout>
 
-        <TextView
-            android:id="@+id/edit_profile_textview_country"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="22dp"
-            android:fontFamily="@font/manrope_bold"
-            android:text="@string/country"
-            android:textColor="#000000"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_profile_textInputLayout_lastname" />
+		<TextView
+				android:id="@+id/edit_profile_textview_lastname"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:layout_marginTop="22dp"
+				android:fontFamily="@font/manrope_bold"
+				android:text="@string/edit_profile_lastname"
+				android:textColor="#000000"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/edit_profile_textInputLayout_firstname" />
 
-        <Spinner
-            android:id="@+id/edit_profile_spinner_country"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:entries="@array/countries"
-            android:fontFamily="@font/manrope_medium"
-            android:textColor="#000000"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_profile_textview_country" />
+		<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/edit_profile_textInputLayout_lastname"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:layout_marginEnd="10dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/edit_profile_textview_lastname">
 
-        <TextView
-            android:id="@+id/edit_profile_textview_email"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="22dp"
-            android:fontFamily="@font/manrope_bold"
-            android:text="@string/email"
-            android:textColor="#000000"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edit_profile_spinner_country" />
+			<EditText
+					android:id="@+id/edit_profile_edittext_lastname"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:autofillHints="name"
+					android:background="@null"
+					android:ems="10"
+					android:inputType="textPersonName" />
+		</com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/edit_profile_textInputLayout_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edit_profile_textview_email">
+		<TextView
+				android:id="@+id/edit_profile_textview_country"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:layout_marginTop="22dp"
+				android:fontFamily="@font/manrope_bold"
+				android:text="@string/country"
+				android:textColor="#000000"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/edit_profile_textInputLayout_lastname" />
 
-            <EditText
-                android:id="@+id/edit_profile_edittext_email"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:autofillHints="name"
-                android:background="@null"
-                android:ems="10"
-                android:inputType="textEmailAddress" />
-        </com.google.android.material.textfield.TextInputLayout>
+		<Spinner
+				android:id="@+id/edit_profile_spinner_country"
+				android:layout_width="match_parent"
+				android:layout_height="50dp"
+				android:layout_marginStart="10dp"
+				android:layout_marginEnd="10dp"
+				android:entries="@array/countries"
+				android:fontFamily="@font/manrope_medium"
+				android:textColor="#000000"
+				android:textSize="16sp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/edit_profile_textview_country" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/edit_profile_button_cancel"
-            android:layout_width="138dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginBottom="10dp"
-			android:layout_marginTop="40dp"
-            android:backgroundTint="#EFEFEF"
-            android:fontFamily="@font/manrope_bold"
-            android:letterSpacing="0"
-            android:text="@string/cancel"
-            android:textAllCaps="false"
-            android:textColor="#383838"
-            android:textSize="20sp"
-            app:cornerRadius="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edit_profile_textInputLayout_email" />
+		<TextView
+				android:id="@+id/edit_profile_textview_email"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:layout_marginTop="22dp"
+				android:fontFamily="@font/manrope_bold"
+				android:text="@string/email"
+				android:textColor="#000000"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/edit_profile_spinner_country" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/edit_profile_button_save"
-            android:layout_width="138dp"
-            android:layout_height="60dp"
-            android:layout_marginEnd="10dp"
-			android:layout_marginTop="40dp"
-            android:backgroundTint="#ACACAC"
-            android:fontFamily="@font/manrope_bold"
-            android:letterSpacing="0"
-            android:text="@string/save"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            app:cornerRadius="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edit_profile_textInputLayout_email" />
+		<com.google.android.material.textfield.TextInputLayout
+				android:id="@+id/edit_profile_textInputLayout_email"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="10dp"
+				android:layout_marginEnd="10dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@+id/edit_profile_textview_email">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+			<EditText
+					android:id="@+id/edit_profile_edittext_email"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:autofillHints="name"
+					android:background="@null"
+					android:ems="10"
+					android:inputType="textEmailAddress" />
+		</com.google.android.material.textfield.TextInputLayout>
+
+		<com.google.android.material.button.MaterialButton
+				android:id="@+id/edit_profile_button_cancel"
+				android:layout_width="138dp"
+				android:layout_height="60dp"
+				android:layout_marginStart="10dp"
+				android:layout_marginBottom="10dp"
+				android:layout_marginTop="40dp"
+				android:backgroundTint="#EFEFEF"
+				android:fontFamily="@font/manrope_bold"
+				android:letterSpacing="0"
+				android:text="@string/cancel"
+				android:textAllCaps="false"
+				android:textColor="#383838"
+				android:textSize="20sp"
+				app:cornerRadius="10dp"
+				app:layout_constraintStart_toStartOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/edit_profile_textInputLayout_email" />
+
+		<com.google.android.material.button.MaterialButton
+				android:id="@+id/edit_profile_button_save"
+				android:layout_width="138dp"
+				android:layout_height="60dp"
+				android:layout_marginEnd="10dp"
+				android:layout_marginTop="40dp"
+				android:backgroundTint="#ACACAC"
+				android:fontFamily="@font/manrope_bold"
+				android:letterSpacing="0"
+				android:text="@string/save"
+				android:textAllCaps="false"
+				android:textColor="#FFFFFF"
+				android:textSize="20sp"
+				app:cornerRadius="10dp"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintTop_toBottomOf="@id/edit_profile_textInputLayout_email" />
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

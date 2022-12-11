@@ -5,10 +5,12 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import kz.sdu.roza.data.dao.TrackDatabaseDAO
+import kz.sdu.roza.data.dao.UserDAO
 import kz.sdu.roza.data.entities.*
 
 @Database(
     entities = [
+        User::class,
         Track::class,
         Chart::class,
         Playlists::class,
@@ -21,6 +23,7 @@ import kz.sdu.roza.data.entities.*
 abstract class AudioServiceDatabase : RoomDatabase() {
 
     abstract val tracksDatabaseDao: TrackDatabaseDAO
+    abstract val userDao: UserDAO
 
     companion object {
         @Volatile
