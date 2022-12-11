@@ -74,6 +74,9 @@
 				android:name="title"
 				app:argType="string"
 				app:nullable="true" />
+		<action
+			android:id="@+id/action_chartFragment_to_musicPlayerFragment"
+			app:destination="@id/musicPlayerFragment" />
 	</fragment>
 	<fragment
 			android:id="@+id/playlistFragment"
@@ -85,4 +88,9 @@
 			android:name="kz.sdu.roza.presentation.auth.signin.SignInFragment"
 			android:label="fragment_sign_in"
 			tools:layout="@layout/fragment_sign_in" />
+	<fragment
+		android:id="@+id/musicPlayerFragment"
+		android:name="kz.sdu.roza.presentation.player.MusicPlayerFragment"
+		android:label="fragment_music_player"
+		tools:layout="@layout/fragment_music_player" />
 </navigation>

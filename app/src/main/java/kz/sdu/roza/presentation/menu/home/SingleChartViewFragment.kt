@@ -1,11 +1,14 @@
 package kz.sdu.roza.presentation.menu.home
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import kz.sdu.roza.R
+import kz.sdu.roza.data.entities.Chart
 import kz.sdu.roza.data.entities.Track
 
 class SingleChartViewAdapter(private val dataSet: List<Track>) :
@@ -30,7 +33,16 @@ class SingleChartViewAdapter(private val dataSet: List<Track>) :
     }
 
     override fun onBindViewHolder(holder: ChartPlaylistItemViewHolder, position: Int) {
-        holder.bind(dataSet[position])
+        val track: Track = dataSet[position]
+        holder.itemView.setOnClickListener {
+            val bundle = Bundle()
+            bundle.putString("artists", track.artists)
+            bundle.putString("title", track.title)
+
+            holder.itemView.findNavController()
+                .navigate(R.id.action_chartFragment_to_musicPlayerFragment, bundle)
+        }
+        holder.bind(track)
     }
 
     override fun getItemCount(): Int = dataSet.size

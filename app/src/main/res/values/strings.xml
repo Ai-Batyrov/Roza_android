@@ -1,297 +1,297 @@
 <resources>
-	<string name="app_name">Roza</string>
-	<string name="favorites_title">Favorites</string>
-	<string name="favorites_items_count">20 songs</string>
-	<string name="home_chart_cover_image">chart_cover_image</string>
-	<string name="chart_title">High Energy Songs</string>
-	<string name="track_list_item_title">Title</string>
-	<string name="track_list_item_artists">Artists</string>
-	<string name="search">Search</string>
-	<string name="results">Results</string>
-	<string name="search_hint">Song or Artist</string>
-	<string name="welcome_to_roza">Welcome to ROZA</string>
-	<string name="enter_roza_credentials">Please, enter your ROZA account credentials</string>
-	<string name="password">Password</string>
-	<string name="email">E-mail</string>
-	<string name="sign_up">Sign Up</string>
-	<string name="login">Log In</string>
-	<string name="sign_up_to_roza">Sign Up to ROZA</string>
-	<string name="firstname">Firstname</string>
-	<string name="lastname">Lastname</string>
-	<string name="name">Name</string>
-	<string name="country">Country</string>
-	<string name="kazakhstan">Kazakhstan</string>
-	<string name="next">Next</string>
-	<string name="cancel">Cancel</string>
-	<string name="we_send_verification_code_to">We send verification code to</string>
-	<string name="na_03_gmail_com">a**************.03@gmail.com</string>
-	<string name="please_enter_code_in_your_e_mail_message">Please, enter code in your e-mail message</string>
-	<string name="code">Code</string>
-	<string name="radio_stations_radio_count">7 internet radio streams</string>
-	<string name="radio_stations_header_text">Radio Stations</string>
-	<string name="radio_stations_add_string">+</string>
-	<string name="settings_text_profile">Profile</string>
-	<string name="settings_user_fullname">Yerkebulan Rakhmanberdi</string>
-	<string name="settings_button_text_edit_profile">Edit profile</string>
-	<string name="settings_button_text_logout">Log out</string>
-	<string name="settings_text_color_scheme">App theme</string>
-	<string name="settings_text_application_color_scheme">Color Scheme</string>
-	<string name="settings_color_scheme_select_text">System</string>
-	<string name="settings_text_local_files">Local files</string>
-	<string name="settings_text_show_local_files">Show audio files from this device</string>
-	<string name="settings_text_about">About</string>
-	<string name="settings_text_version">Version</string>
-	<string name="settings_text_version_value">v1.0.0</string>
-	<string name="add_new_internet_radio_stream">Add new internet radio stream</string>
-	<string name="title">Title</string>
-	<string name="url">URL</string>
-	<string name="select_file">Select file</string>
-	<string name="cover_image">Cover image</string>
-	<string name="save">Save</string>
-	<string name="profile">Profile</string>
-	<string name="color_scheme">Color Scheme</string>
-	<string name="application_color_theme">Application color theme</string>
-	<string name="system">System</string>
-	<string name="local_files">Local files</string>
-	<string name="files_from_device">Show audio files from this device</string>
-	<string name="about">About</string>
-	<string name="version">Version</string>
-	<string name="versionNumber">v1.0.0</string>
-	<string name="add_radio_stream_url_hint_text">https://stream.radio.com/main.aacp</string>
-	<string name="add_radio_stream_title_hint_text">Radio Name</string>
-	<string name="hello_blank_fragment">Hello blank fragment</string>
-	<string name="bottom_nav_home_title">Home</string>
-	<string name="bottom_nav_search_title">Search</string>
-	<string name="bottom_nav_favorites_title">Favorites</string>
-	<string name="bottom_nav_burger_menu_title">Other</string>
-	<string name="add_new_playlist_title">Add new playlist</string>
-	<string name="turkish_songs">Türkçe Şarkılar</string>
-	<string name="number_of_songs">25 songs</string>
-	<string name="choose_sort_option">Choose sort option</string>
-	<string name="developers">Developers</string>
-	<string name="developer_names">Yerkebulan Rahmanberdi, Aibolat Batyrov, Samat Zhumamuratov, Rauan Orynbasar</string>
-	<string name="edit_profile_header_text">Edit Profile</string>
-	<string name="edit_profile_lastname">Lastname</string>
-	<string name="edit_profile_user_avatar_imageview_content_desc">Yours avatar image</string>
-	<string name="card_title_text">Title</string>
-	<string name="card_desc_text">Description</string>
-	<string name="settings_change_password">Change password</string>
-	<string name="settings_click_to_go_change_password_page">Click to go change password page</string>
-	<string name="burger_menu_settings_user_fullname">Yerkebulan Rakhmanberdi</string>
-	<string name="burger_menu_radio_stations">Radio Stations</string>
-	<string name="burger_menu_playlists">Playlists</string>
-	<string name="home_header_greeting">Welcome, Aibolat Batyrov</string>
-	<string name="home_header_text">Today\'s recommendations for you</string>
-	<string name="home_chart_recyclerView_title">Top mixes</string>
-	<string name="single_chart_title">High Energy Songs</string>
-	<string name="single_chart_count">25 songs</string>
-	<string-array name="sort_options">
-		<item>Date added</item>
-		<item>By song name</item>
-		<item>By artist name</item>
-	</string-array>
-	<string-array name="color_scheme_options">
-		<item>System</item>
-		<item>Light</item>
-		<item>Dark</item>
-	</string-array>
-	<string-array name="countries">
-		<item>Afghanistan</item>
-		<item>Albania</item>
-		<item>Algeria</item>
-		<item>Andorra</item>
-		<item>Angola</item>
-		<item>Antigua and Barbuda</item>
-		<item>Argentina</item>
-		<item>Armenia</item>
-		<item>Australia</item>
-		<item>Austria</item>
-		<item>Azerbaijan</item>
-		<item>Bahamas</item>
-		<item>Bahrain</item>
-		<item>Bangladesh</item>
-		<item>Barbados</item>
-		<item>Belarus</item>
-		<item>Belgium</item>
-		<item>Belize</item>
-		<item>Benin</item>
-		<item>Bhutan</item>
-		<item>Bolivia</item>
-		<item>Bosnia and Herzegovina</item>
-		<item>Botswana</item>
-		<item>Brazil</item>
-		<item>Brunei</item>
-		<item>Bulgaria</item>
-		<item>Burkina Faso</item>
-		<item>Burundi</item>
-		<item>Côte d\'Ivoire</item>
-		<item>Cabo Verde</item>
-		<item>Cambodia</item>
-		<item>Cameroon</item>
-		<item>Canada</item>
-		<item>Central African Republic</item>
-		<item>Chad</item>
-		<item>Chile</item>
-		<item>China</item>
-		<item>Colombia</item>
-		<item>Comoros</item>
-		<item>Congo (Congo-Brazzaville)</item>
-		<item>Costa Rica</item>
-		<item>Croatia</item>
-		<item>Cuba</item>
-		<item>Cyprus</item>
-		<item>Czechia (Czech Republic)</item>
-		<item>Democratic Republic of the Congo</item>
-		<item>Denmark</item>
-		<item>Djibouti</item>
-		<item>Dominica</item>
-		<item>Dominican Republic</item>
-		<item>Ecuador</item>
-		<item>Egypt</item>
-		<item>El Salvador</item>
-		<item>Equatorial Guinea</item>
-		<item>Eritrea</item>
-		<item>Estonia</item>
-		<item>Eswatini (fmr. "Swaziland")</item>
-		<item>Ethiopia</item>
-		<item>Fiji</item>
-		<item>Finland</item>
-		<item>France</item>
-		<item>Gabon</item>
-		<item>Gambia</item>
-		<item>Georgia</item>
-		<item>Germany</item>
-		<item>Ghana</item>
-		<item>Greece</item>
-		<item>Grenada</item>
-		<item>Guatemala</item>
-		<item>Guinea</item>
-		<item>Guinea-Bissau</item>
-		<item>Guyana</item>
-		<item>Haiti</item>
-		<item>Holy See</item>
-		<item>Honduras</item>
-		<item>Hungary</item>
-		<item>Iceland</item>
-		<item>India</item>
-		<item>Indonesia</item>
-		<item>Iran</item>
-		<item>Iraq</item>
-		<item>Ireland</item>
-		<item>Israel</item>
-		<item>Italy</item>
-		<item>Jamaica</item>
-		<item>Japan</item>
-		<item>Jordan</item>
-		<item>Kazakhstan</item>
-		<item>Kenya</item>
-		<item>Kiribati</item>
-		<item>Kuwait</item>
-		<item>Kyrgyzstan</item>
-		<item>Laos</item>
-		<item>Latvia</item>
-		<item>Lebanon</item>
-		<item>Lesotho</item>
-		<item>Liberia</item>
-		<item>Libya</item>
-		<item>Liechtenstein</item>
-		<item>Lithuania</item>
-		<item>Luxembourg</item>
-		<item>Madagascar</item>
-		<item>Malawi</item>
-		<item>Malaysia</item>
-		<item>Maldives</item>
-		<item>Mali</item>
-		<item>Malta</item>
-		<item>Marshall Islands</item>
-		<item>Mauritania</item>
-		<item>Mauritius</item>
-		<item>Mexico</item>
-		<item>Micronesia</item>
-		<item>Moldova</item>
-		<item>Monaco</item>
-		<item>Mongolia</item>
-		<item>Montenegro</item>
-		<item>Morocco</item>
-		<item>Mozambique</item>
-		<item>Myanmar (formerly Burma)</item>
-		<item>Namibia</item>
-		<item>Nauru</item>
-		<item>Nepal</item>
-		<item>Netherlands</item>
-		<item>New Zealand</item>
-		<item>Nicaragua</item>
-		<item>Niger</item>
-		<item>Nigeria</item>
-		<item>North Korea</item>
-		<item>North Macedonia</item>
-		<item>Norway</item>
-		<item>Oman</item>
-		<item>Pakistan</item>
-		<item>Palau</item>
-		<item>Palestine State</item>
-		<item>Panama</item>
-		<item>Papua New Guinea</item>
-		<item>Paraguay</item>
-		<item>Peru</item>
-		<item>Philippines</item>
-		<item>Poland</item>
-		<item>Portugal</item>
-		<item>Qatar</item>
-		<item>Romania</item>
-		<item>Russia</item>
-		<item>Rwanda</item>
-		<item>Saint Kitts and Nevis</item>
-		<item>Saint Lucia</item>
-		<item>Saint Vincent and the Grenadines</item>
-		<item>Samoa</item>
-		<item>San Marino</item>
-		<item>Sao Tome and Principe</item>
-		<item>Saudi Arabia</item>
-		<item>Senegal</item>
-		<item>Serbia</item>
-		<item>Seychelles</item>
-		<item>Sierra Leone</item>
-		<item>Singapore</item>
-		<item>Slovakia</item>
-		<item>Slovenia</item>
-		<item>Solomon Islands</item>
-		<item>Somalia</item>
-		<item>South Africa</item>
-		<item>South Korea</item>
-		<item>South Sudan</item>
-		<item>Spain</item>
-		<item>Sri Lanka</item>
-		<item>Sudan</item>
-		<item>Suriname</item>
-		<item>Sweden</item>
-		<item>Switzerland</item>
-		<item>Syria</item>
-		<item>Tajikistan</item>
-		<item>Tanzania</item>
-		<item>Thailand</item>
-		<item>Timor-Leste</item>
-		<item>Togo</item>
-		<item>Tonga</item>
-		<item>Trinidad and Tobago</item>
-		<item>Tunisia</item>
-		<item>Turkey</item>
-		<item>Turkmenistan</item>
-		<item>Tuvalu</item>
-		<item>Uganda</item>
-		<item>Ukraine</item>
-		<item>United Arab Emirates</item>
-		<item>United Kingdom</item>
-		<item>United States of America</item>
-		<item>Uruguay</item>
-		<item>Uzbekistan</item>
-		<item>Vanuatu</item>
-		<item>Venezuela</item>
-		<item>Vietnam</item>
-		<item>Yemen</item>
-		<item>Zambia</item>
-		<item>Zimbabwe</item>
-	</string-array>
-	<string name="fullNameFormat">%1$s %2$s</string>
-	<string name="username">Username</string>
+    <string name="app_name">Roza</string>
+    <string name="favorites_title">Favorites</string>
+    <string name="favorites_items_count">20 songs</string>
+    <string name="home_chart_cover_image">chart_cover_image</string>
+    <string name="chart_title">High Energy Songs</string>
+    <string name="track_list_item_title">Title</string>
+    <string name="track_list_item_artists">Artists</string>
+    <string name="search">Search</string>
+    <string name="results">Results</string>
+    <string name="search_hint">Song or Artist</string>
+    <string name="welcome_to_roza">Welcome to ROZA</string>
+    <string name="enter_roza_credentials">Please, enter your ROZA account credentials</string>
+    <string name="password">Password</string>
+    <string name="email">E-mail</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Log In</string>
+    <string name="sign_up_to_roza">Sign Up to ROZA</string>
+    <string name="firstname">Firstname</string>
+    <string name="lastname">Lastname</string>
+    <string name="name">Name</string>
+    <string name="country">Country</string>
+    <string name="kazakhstan">Kazakhstan</string>
+    <string name="next">Next</string>
+    <string name="cancel">Cancel</string>
+    <string name="we_send_verification_code_to">We send verification code to</string>
+    <string name="na_03_gmail_com">a**************.03@gmail.com</string>
+    <string name="please_enter_code_in_your_e_mail_message">Please, enter code in your e-mail message</string>
+    <string name="code">Code</string>
+    <string name="radio_stations_radio_count">7 internet radio streams</string>
+    <string name="radio_stations_header_text">Radio Stations</string>
+    <string name="radio_stations_add_string">+</string>
+    <string name="settings_text_profile">Profile</string>
+    <string name="settings_user_fullname">Yerkebulan Rakhmanberdi</string>
+    <string name="settings_button_text_edit_profile">Edit profile</string>
+    <string name="settings_button_text_logout">Log out</string>
+    <string name="settings_text_color_scheme">App theme</string>
+    <string name="settings_text_application_color_scheme">Color Scheme</string>
+    <string name="settings_color_scheme_select_text">System</string>
+    <string name="settings_text_local_files">Local files</string>
+    <string name="settings_text_show_local_files">Show audio files from this device</string>
+    <string name="settings_text_about">About</string>
+    <string name="settings_text_version">Version</string>
+    <string name="settings_text_version_value">v1.0.0</string>
+    <string name="add_new_internet_radio_stream">Add new internet radio stream</string>
+    <string name="title">Title</string>
+    <string name="url">URL</string>
+    <string name="select_file">Select file</string>
+    <string name="cover_image">Cover image</string>
+    <string name="save">Save</string>
+    <string name="profile">Profile</string>
+    <string name="color_scheme">Color Scheme</string>
+    <string name="application_color_theme">Application color theme</string>
+    <string name="system">System</string>
+    <string name="local_files">Local files</string>
+    <string name="files_from_device">Show audio files from this device</string>
+    <string name="about">About</string>
+    <string name="version">Version</string>
+    <string name="versionNumber">v1.0.0</string>
+    <string name="add_radio_stream_url_hint_text">https://stream.radio.com/main.aacp</string>
+    <string name="add_radio_stream_title_hint_text">Radio Name</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bottom_nav_home_title">Home</string>
+    <string name="bottom_nav_search_title">Search</string>
+    <string name="bottom_nav_favorites_title">Favorites</string>
+    <string name="bottom_nav_burger_menu_title">Other</string>
+    <string name="add_new_playlist_title">Add new playlist</string>
+    <string name="turkish_songs">Türkçe Şarkılar</string>
+    <string name="number_of_songs">25 songs</string>
+    <string name="choose_sort_option">Choose sort option</string>
+    <string name="developers">Developers</string>
+    <string name="developer_names">Yerkebulan Rahmanberdi, Aibolat Batyrov, Samat Zhumamuratov, Rauan Orynbasar</string>
+    <string name="edit_profile_header_text">Edit Profile</string>
+    <string name="edit_profile_lastname">Lastname</string>
+    <string name="edit_profile_user_avatar_imageview_content_desc">Yours avatar image</string>
+    <string name="card_title_text">Title</string>
+    <string name="card_desc_text">Description</string>
+    <string name="settings_change_password">Change password</string>
+    <string name="settings_click_to_go_change_password_page">Click to go change password page</string>
+    <string name="burger_menu_settings_user_fullname">Yerkebulan Rakhmanberdi</string>
+    <string name="burger_menu_radio_stations">Radio Stations</string>
+    <string name="burger_menu_playlists">Playlists</string>
+    <string name="home_header_greeting">Welcome, Aibolat Batyrov</string>
+    <string name="home_header_text">Today\'s recommendations for you</string>
+    <string name="home_chart_recyclerView_title">Top mixes</string>
+    <string name="single_chart_title">High Energy Songs</string>
+    <string name="single_chart_count">25 songs</string>
+    <string-array name="sort_options">
+        <item>Date added</item>
+        <item>By song name</item>
+        <item>By artist name</item>
+    </string-array>
+    <string-array name="color_scheme_options">
+        <item>System</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+    <string-array name="countries">
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Antigua and Barbuda</item>
+        <item>Argentina</item>
+        <item>Armenia</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Azerbaijan</item>
+        <item>Bahamas</item>
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Barbados</item>
+        <item>Belarus</item>
+        <item>Belgium</item>
+        <item>Belize</item>
+        <item>Benin</item>
+        <item>Bhutan</item>
+        <item>Bolivia</item>
+        <item>Bosnia and Herzegovina</item>
+        <item>Botswana</item>
+        <item>Brazil</item>
+        <item>Brunei</item>
+        <item>Bulgaria</item>
+        <item>Burkina Faso</item>
+        <item>Burundi</item>
+        <item>Côte d\'Ivoire</item>
+        <item>Cabo Verde</item>
+        <item>Cambodia</item>
+        <item>Cameroon</item>
+        <item>Canada</item>
+        <item>Central African Republic</item>
+        <item>Chad</item>
+        <item>Chile</item>
+        <item>China</item>
+        <item>Colombia</item>
+        <item>Comoros</item>
+        <item>Congo (Congo-Brazzaville)</item>
+        <item>Costa Rica</item>
+        <item>Croatia</item>
+        <item>Cuba</item>
+        <item>Cyprus</item>
+        <item>Czechia (Czech Republic)</item>
+        <item>Democratic Republic of the Congo</item>
+        <item>Denmark</item>
+        <item>Djibouti</item>
+        <item>Dominica</item>
+        <item>Dominican Republic</item>
+        <item>Ecuador</item>
+        <item>Egypt</item>
+        <item>El Salvador</item>
+        <item>Equatorial Guinea</item>
+        <item>Eritrea</item>
+        <item>Estonia</item>
+        <item>Eswatini (fmr. "Swaziland")</item>
+        <item>Ethiopia</item>
+        <item>Fiji</item>
+        <item>Finland</item>
+        <item>France</item>
+        <item>Gabon</item>
+        <item>Gambia</item>
+        <item>Georgia</item>
+        <item>Germany</item>
+        <item>Ghana</item>
+        <item>Greece</item>
+        <item>Grenada</item>
+        <item>Guatemala</item>
+        <item>Guinea</item>
+        <item>Guinea-Bissau</item>
+        <item>Guyana</item>
+        <item>Haiti</item>
+        <item>Holy See</item>
+        <item>Honduras</item>
+        <item>Hungary</item>
+        <item>Iceland</item>
+        <item>India</item>
+        <item>Indonesia</item>
+        <item>Iran</item>
+        <item>Iraq</item>
+        <item>Ireland</item>
+        <item>Israel</item>
+        <item>Italy</item>
+        <item>Jamaica</item>
+        <item>Japan</item>
+        <item>Jordan</item>
+        <item>Kazakhstan</item>
+        <item>Kenya</item>
+        <item>Kiribati</item>
+        <item>Kuwait</item>
+        <item>Kyrgyzstan</item>
+        <item>Laos</item>
+        <item>Latvia</item>
+        <item>Lebanon</item>
+        <item>Lesotho</item>
+        <item>Liberia</item>
+        <item>Libya</item>
+        <item>Liechtenstein</item>
+        <item>Lithuania</item>
+        <item>Luxembourg</item>
+        <item>Madagascar</item>
+        <item>Malawi</item>
+        <item>Malaysia</item>
+        <item>Maldives</item>
+        <item>Mali</item>
+        <item>Malta</item>
+        <item>Marshall Islands</item>
+        <item>Mauritania</item>
+        <item>Mauritius</item>
+        <item>Mexico</item>
+        <item>Micronesia</item>
+        <item>Moldova</item>
+        <item>Monaco</item>
+        <item>Mongolia</item>
+        <item>Montenegro</item>
+        <item>Morocco</item>
+        <item>Mozambique</item>
+        <item>Myanmar (formerly Burma)</item>
+        <item>Namibia</item>
+        <item>Nauru</item>
+        <item>Nepal</item>
+        <item>Netherlands</item>
+        <item>New Zealand</item>
+        <item>Nicaragua</item>
+        <item>Niger</item>
+        <item>Nigeria</item>
+        <item>North Korea</item>
+        <item>North Macedonia</item>
+        <item>Norway</item>
+        <item>Oman</item>
+        <item>Pakistan</item>
+        <item>Palau</item>
+        <item>Palestine State</item>
+        <item>Panama</item>
+        <item>Papua New Guinea</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Philippines</item>
+        <item>Poland</item>
+        <item>Portugal</item>
+        <item>Qatar</item>
+        <item>Romania</item>
+        <item>Russia</item>
+        <item>Rwanda</item>
+        <item>Saint Kitts and Nevis</item>
+        <item>Saint Lucia</item>
+        <item>Saint Vincent and the Grenadines</item>
+        <item>Samoa</item>
+        <item>San Marino</item>
+        <item>Sao Tome and Principe</item>
+        <item>Saudi Arabia</item>
+        <item>Senegal</item>
+        <item>Serbia</item>
+        <item>Seychelles</item>
+        <item>Sierra Leone</item>
+        <item>Singapore</item>
+        <item>Slovakia</item>
+        <item>Slovenia</item>
+        <item>Solomon Islands</item>
+        <item>Somalia</item>
+        <item>South Africa</item>
+        <item>South Korea</item>
+        <item>South Sudan</item>
+        <item>Spain</item>
+        <item>Sri Lanka</item>
+        <item>Sudan</item>
+        <item>Suriname</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>Syria</item>
+        <item>Tajikistan</item>
+        <item>Tanzania</item>
+        <item>Thailand</item>
+        <item>Timor-Leste</item>
+        <item>Togo</item>
+        <item>Tonga</item>
+        <item>Trinidad and Tobago</item>
+        <item>Tunisia</item>
+        <item>Turkey</item>
+        <item>Turkmenistan</item>
+        <item>Tuvalu</item>
+        <item>Uganda</item>
+        <item>Ukraine</item>
+        <item>United Arab Emirates</item>
+        <item>United Kingdom</item>
+        <item>United States of America</item>
+        <item>Uruguay</item>
+        <item>Uzbekistan</item>
+        <item>Vanuatu</item>
+        <item>Venezuela</item>
+        <item>Vietnam</item>
+        <item>Yemen</item>
+        <item>Zambia</item>
+        <item>Zimbabwe</item>
+    </string-array>
+    <string name="fullNameFormat">%1$s %2$s</string>
+    <string name="username">Username</string>
 </resources>
