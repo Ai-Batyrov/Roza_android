@@ -55,6 +55,9 @@
 		<action
 				android:id="@+id/action_burgerMenuFragment_to_settingsFragment"
 				app:destination="@id/settingsFragment" />
+		<action
+				android:id="@+id/action_burgerMenuFragment_to_userPlaylistsFragment"
+				app:destination="@id/userPlaylistsFragment" />
 	</fragment>
 	<fragment
 			android:id="@+id/favoritesMainFragment"
@@ -85,4 +88,18 @@
 			android:name="kz.sdu.roza.presentation.auth.signin.SignInFragment"
 			android:label="fragment_sign_in"
 			tools:layout="@layout/fragment_sign_in" />
+	<fragment
+			android:id="@+id/userPlaylistsFragment"
+			android:name="kz.sdu.roza.presentation.menu.playlists.UserPlaylistsFragment"
+			android:label="fragment_user_playlists"
+			tools:layout="@layout/fragment_user_playlists">
+		<action
+				android:id="@+id/action_userPlaylistsFragment_to_singleUserPlaylistFragment"
+				app:destination="@id/singleUserPlaylistFragment" />
+	</fragment>
+	<fragment
+			android:id="@+id/singleUserPlaylistFragment"
+			android:name="kz.sdu.roza.presentation.menu.playlists.SingleUserPlaylistFragment"
+			android:label="fragment_single_user_playlist"
+			tools:layout="@layout/fragment_single_user_playlist" />
 </navigation>

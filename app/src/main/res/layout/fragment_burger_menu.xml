@@ -46,45 +46,6 @@
 	</androidx.constraintlayout.widget.ConstraintLayout>
 
 	<androidx.constraintlayout.widget.ConstraintLayout
-			android:id="@+id/burger_menu_layout_radio_stations"
-			android:layout_width="match_parent"
-			android:layout_height="70dp"
-			android:clickable="true"
-			android:background="@drawable/roundcorner"
-			app:layout_constraintStart_toStartOf="parent"
-			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintTop_toBottomOf="@id/burger_menu_layout_settings"
-			android:paddingStart="20dp"
-			android:paddingEnd="20dp"
-			android:layout_marginTop="5dp"
-			android:layout_marginStart="10dp"
-			android:layout_marginEnd="10dp">
-
-		<com.google.android.material.imageview.ShapeableImageView
-				android:id="@+id/burger_menu_radio_stations_icon"
-				android:layout_width="30dp"
-				android:layout_height="30dp"
-				android:src="@drawable/nav_menu_radio_stations_icon"
-				app:shapeAppearanceOverlay="@style/circularImageView"
-				app:layout_constraintStart_toStartOf="parent"
-				app:layout_constraintTop_toTopOf="parent"
-				app:layout_constraintBottom_toBottomOf="parent" />
-
-		<com.google.android.material.textview.MaterialTextView
-				android:id="@+id/burger_menu_radio_stations_text"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:gravity="center"
-				android:text="@string/burger_menu_radio_stations"
-				android:fontFamily="@font/manrope_medium"
-				android:textSize="18sp"
-				app:layout_constraintStart_toEndOf="@id/burger_menu_radio_stations_icon"
-				app:layout_constraintTop_toTopOf="parent"
-				app:layout_constraintBottom_toBottomOf="parent"
-				android:layout_marginStart="20dp" />
-	</androidx.constraintlayout.widget.ConstraintLayout>
-
-	<androidx.constraintlayout.widget.ConstraintLayout
 			android:id="@+id/burger_menu_layout_playlists"
 			android:layout_width="match_parent"
 			android:layout_height="70dp"
@@ -92,7 +53,7 @@
 			android:background="@drawable/roundcorner"
 			app:layout_constraintStart_toStartOf="parent"
 			app:layout_constraintEnd_toEndOf="parent"
-			app:layout_constraintTop_toBottomOf="@id/burger_menu_layout_radio_stations"
+			app:layout_constraintTop_toBottomOf="@id/burger_menu_layout_settings"
 			android:paddingStart="20dp"
 			android:paddingEnd="20dp"
 			android:layout_marginTop="5dp"

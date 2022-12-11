@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import kz.sdu.roza.data.db.AudioServiceDatabase
 import kz.sdu.roza.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

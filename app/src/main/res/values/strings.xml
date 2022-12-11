@@ -294,4 +294,5 @@
 	</string-array>
 	<string name="fullNameFormat">%1$s %2$s</string>
 	<string name="username">Username</string>
+	<string name="playlists_header_text">Playlists</string>
 </resources>
