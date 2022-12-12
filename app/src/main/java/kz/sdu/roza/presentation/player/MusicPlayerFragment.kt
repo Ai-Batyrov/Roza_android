@@ -70,7 +70,9 @@ class MusicPlayerFragment : Fragment() {
 
     private fun controlSound(id: Int) {
         btPlay.setOnClickListener {
-            mediaPlayer = MediaPlayer.create(this.context, id)
+            if (mediaPlayer == null) {
+                mediaPlayer = MediaPlayer.create(this.context, id)
+            }
             initialiseSeekBar()
             if (!mediaPlayer!!.isPlaying) {
                 mediaPlayer?.start()
